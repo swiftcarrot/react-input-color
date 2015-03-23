@@ -1,0 +1,155 @@
+.slider-x {
+  position: relative;
+  width: 190px;
+  height: 12px;
+  background-color: #ccc;
+  user-select: none;
+  -webkit-user-select: none;
+  border: 1px solid #aaa;
+}
+
+.slider-x .handle {
+  position: absolute;
+  width: 5px;
+  height: 12px;
+  border: 1px solid #aaa;
+  background-color: #eee;
+}
+
+.slider-xy {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .handle {
+    position: absolute;
+
+    &:after {
+      position: relative;
+      display: block;
+      top: -4px;
+      left: -4px;
+      width: 8px;
+      height: 8px;
+      background-color: rgba(0, 0, 0, 0);
+      border: 2px solid #fff;
+      border-radius: 50%;
+      content: '';
+    }
+  }
+}
+
+
+.m-color-picker {
+  width: 250px;
+  height: 340px;
+  padding: 10px;
+  background-color: #eaeaea;
+
+  .selector {
+    position: relative;
+    width: 230px;
+    height: 230px;
+
+    // .square {
+    //   position: absolute;
+    //   top: 0; left: 0; right: 0; bottom: 0;
+    //   width: 100%;
+    //   height: 100%;
+
+    //   .handle {
+    //     position: absolute;
+
+    //     &:after {
+    //       position: relative;
+    //       display: block;
+    //       top: -4px;
+    //       left: -4px;
+    //       width: 8px;
+    //       height: 8px;
+    //       background-color: rgba(0, 0, 0, 0);
+    //       border: 2px solid #fff;
+    //       border-radius: 50%;
+    //       content: '';
+    //     }
+    //   }
+    // }
+  }
+
+  .gradient {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+  }
+
+  .white {
+    background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%)
+  }
+
+  .dark {
+    background: linear-gradient(to bottom, transparent 0%, #000000 100%);
+  }
+
+  .sliders {
+    position: relative;
+    margin-top: 10px;
+  }
+
+  // .slider {
+  //   width: 190px;
+  //   height: 12px;
+  //   border: 1px solid #aaa;
+
+  //   .handle {
+  //     width: 5px;
+  //     height: 12px;
+  //     border: 1px solid #aaa;
+  //     background-color: #eee;
+  //   }
+  // }
+
+  .hue {
+    margin-bottom: 5px;
+    background: linear-gradient(to left, #FF0000 0%, #FF0099 10%, #CD00FF 20%, #3200FF 30%, #0066FF 40%, #00FFFD 50%, #00FF66 60%, #35FF00 70%, #CDFF00 80%, #FF9900 90%, #FF0000 100%)
+  }
+
+  .opacity {
+  }
+
+  .color {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+  }
+
+  .inputs {
+    margin: 10px 0 0 0;
+  }
+
+  .input {
+    width: 30px;
+    margin-right: 10px;
+    float: left;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .label {
+
+    }
+
+    .value {
+      display: block;
+      width: 100%;
+      margin-bottom: 3px;
+      font-size: 12px;
+    }
+  }
+
+  .hex {
+    width: 70px;
+  }
+}

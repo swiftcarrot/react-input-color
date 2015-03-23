@@ -1,0 +1,30 @@
+{
+  "name": "react-input-color",
+  "version": "1.0.0",
+  "description": "react input color",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "color",
+    "input"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.9.1",
+    "jsx-loader": "^0.12.2",
+    "less": "^2.4.0",
+    "less-loader": "^2.1.0",
+    "style-loader": "^0.8.3"
+  },
+  "dependencies": {
+    "object-assign": "^2.0.0",
+    "react": "^0.13.1",
+    "react-input-number": "^1.0.1",
+    "react-input-slider": "^1.0.0"
+  }
+}

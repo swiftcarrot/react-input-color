@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>react-input-color</title>
+
+  <script src="https://fb.me/react-0.13.1.js"></script>
+  <script src="https://fb.me/JSXTransformer-0.13.1.js"></script>
+  <script src="/builds/react-input-color.js"></script>
+
+  <style type="text/css">
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  </style>
+</head>
+<body>
+
+<div id="target"></div>
+
+<script type="text/jsx">
+
+var App = React.createClass({
+  getInitialState: function() {
+    return {
+      color: '#3498db',
+      alpha: 100
+    };
+  },
+
+  render: function() {
+    return <InputColor
+      color={this.state.color}
+      alpha={this.state.alpha}
+      onChange={this._onChange}/>;
+  },
+
+  _onChange: function(color, alpha) {
+    this.setState({
+      color: color,
+      alpha: alpha
+    });
+  }
+});
+
+var target = document.getElementById('target');
+React.render(<App/>, target);
+
+</script>
+
+</body>
+</html>
