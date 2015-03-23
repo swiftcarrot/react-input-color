@@ -1,6 +1,6 @@
 {
   "name": "react-input-color",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react input color",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "color",
     "input"
   ],
-  "author": "",
+  "author": "Wang Zuo",
   "license": "MIT",
   "devDependencies": {
     "css-loader": "^0.9.1",
@@ -26,5 +26,16 @@
     "react": "^0.13.1",
     "react-input-number": "^1.0.1",
     "react-input-slider": "^1.0.0"
-  }
+  },
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangzuo/react-input-color.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wangzuo/react-input-color/issues"
+  },
+  "homepage": "https://github.com/wangzuo/react-input-color"
 }
