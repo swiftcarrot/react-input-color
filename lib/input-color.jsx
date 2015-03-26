@@ -1,148 +1,174 @@
 var cx = require('react/lib/cx');
 var React = require('react');
 var objectAssign = require('object-assign');
-
 var InputSlider = require('react-input-slider');
+var InputNumber = require('react-input-number');
 
 var rgba = require('./rgba');
 var rgb2hsv = require('./rgb2hsv');
 var hsv2hex = require('./hsv2hex');
-
-function parse(str, alpha) {
-  var hex = str.substr(1);
-  var parts = /([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  var rgb = {
-    r: parseInt(parts[1], 16),
-    g: parseInt(parts[2], 16),
-    b: parseInt(parts[3], 16),
-  };
-
-  var color = {
-    hex: hex,
-    rgb: rgb,
-    alpha: alpha
-  };
-
-  color.rgba = rgba(color.rgb, color.alpha);
-
-  objectAssign(color, {
-    hsv: rgb2hsv(rgb)
-  });
-
-  color.hue = hsv2hex({
-    h: color.hsv.h,
-    s: 100,
-    v: 100
-  });
-
-  return color;
-}
-
+var hsv2rgb = require('./hsv2rgb');
+var rgb2hex = require('./rgb2hex');
+var hex2rgb = require('./hex2rgb');
 
 module.exports = React.createClass({
   displayName: 'InputColor',
 
   render: function () {
-    var color = parse(this.props.color, this.props.alpha);
+    var color = this.props.color;
+    var r = color.r, g = color.g, b = color.b;
+    var h = color.h, s = color.s, v = color.v;
+    var a = color.a, hex = color.hex;
 
+    var rgbaBackground = rgba(r, g, b, a);
     var opacityGradient = 'linear-gradient(to right, '+
-      rgba(color.rgb, 0)+', '+
-      rgba(color.rgb, 100)+')';
-
-    var hsv = color.hsv;
-
-    this.color = color;
+      rgba(r, g, b, 0)+', '+
+      rgba(r, g, b, 100)+')';
+    var hueBackground = '#'+hsv2hex(h, 100, 100);
 
     return (
-      <div className="m-color-picker">
-        <div className="selector"
-        style={{backgroundColor: color.hue}}>
-          <div className="gradient white"></div>
-          <div className="gradient dark"></div>
-          <InputSlider className="slider-xy"
-            x={color.hsv.s} xmax={100}
-            y={100-color.hsv.v} ymax={100}
-            onChange={this._onSVChange}/>
+      <div className="m-input-color">
+        <div className="m-color-picker">
+          <div className="selector"
+          style={{backgroundColor: hueBackground}}>
+            <div className="gradient white"></div>
+            <div className="gradient dark"></div>
+            <InputSlider className="slider-xy"
+              x={s} xmax={100}
+              y={100-v} ymax={100}
+              onChange={this._onSVChange}/>
+          </div>
+
+          <div className="sliders">
+            <InputSlider
+              className="slider-x hue"
+              axis="x" x={h} xmax={360}
+              onChange={this._onHueChange}/>
+
+            <InputSlider
+              className="slider-x opacity"
+              axis="x" x={a} xmax={100}
+              style={{background: opacityGradient}}
+              onChange={this._onAlphaChange}/>
+
+            <div className="color" style={{backgroundColor: rgbaBackground}}></div>
+          </div>
+
+          <div className="inputs">
+            <div className="input hex">
+              <input type="text" className="value" value={hex} onChange={this._onHexChange}/>
+              <span className="label">Hex</span>
+            </div>
+
+            <div className="input r">
+              <InputNumber
+                className="value" value={r}
+                onChange={this.changeRGB.bind(null, 'r')}/>
+              <span className="label">R</span>
+            </div>
+            <div className="input g">
+              <InputNumber
+                className="value" value={g}
+                onChange={this.changeRGB.bind(null, 'g')}/>
+              <span className="label">G</span>
+            </div>
+            <div className="input b">
+              <InputNumber
+                className="value" value={b}
+                onChange={this.changeRGB.bind(null, 'b')}/>
+              <span className="label">B</span>
+            </div>
+
+            {/*
+            <div className="input h">
+              <InputNumber
+                className="value" value={h}
+                onChange={this.changeHSV.bind(null, 'h')}/>
+              <span className="label">H</span>
+            </div>
+            <div className="input s">
+              <InputNumber
+                className="value" value={s}
+                onChange={this.changeHSV.bind(null, 's')}/>
+              <span className="label">S</span>
+            </div>
+            <div className="input v">
+              <InputNumber
+                className="value" value={v}
+                onChange={this.changeHSV.bind(null, 'v')}/>
+              <span className="label">B</span>
+            </div>
+            */}
+
+            <div className="input a">
+              <InputNumber
+                className="value" value={a}
+                onChange={this.changeAlpha}/>
+              <span className="label">A</span>
+            </div>
+          </div>
         </div>
 
-        <div className="sliders">
-          <InputSlider className="slider-x hue"
-            axis="x" x={color.hsv.h} xmax={360}
-            onChange={this._onHueChange}/>
-
-          <InputSlider className="slider-x opacity"
-            axis="x" x={color.alpha} xmax={100}
-            style={{background: opacityGradient}}
-            onChange={this._onAlphaChange}/>
-
-          <div className="color" style={{backgroundColor: color.rgba}}></div>
-        </div>
-
-        <div className="inputs">
-          <div className="input hex">
-            <input className="value" type="text" value={color.hex}/>
-            <span className="label">Hex</span>
-          </div>
-
-          <div className="input r">
-            <input className="value" type="text" value={color.rgb.r}/>
-            <span className="label">R</span>
-          </div>
-          <div className="input g">
-            <input className="value" type="text" value={color.rgb.g}/>
-            <span className="label">G</span>
-          </div>
-          <div className="input b">
-            <input className="value" type="text" value={color.rgb.b}/>
-            <span className="label">B</span>
-          </div>
-
-          <div className="input h">
-            <input className="value" type="text" value={color.hsv.h}/>
-            <span className="label">H</span>
-          </div>
-          <div className="input s">
-            <input className="value" type="text" value={color.hsv.s}/>
-            <span className="label">S</span>
-          </div>
-          <div className="input v">
-            <input className="value" type="text" value={color.hsv.v}/>
-            <span className="label">B</span>
-          </div>
-
-          <div className="input a">
-            <input className="value" type="text" value={color.alpha}/>
-            <span className="label">A</span>
-          </div>
+        <div className="css-input-box">
+          <div className="css-color" style={{background:rgbaBackground}}></div>
+          <input className="css-input" type="text" value={'#'+hex}/>
         </div>
       </div>
     );
   },
 
-  _onSVChange: function(pos) {
-    var s = pos.x;
-    var v = 100 - pos.y;
-    var color = this.color;
+  changeHSV: function(p, val) {
+    if(this.props.onChange) {
+      var j = p; if(typeof j === 'string') { j = {}; j[p] = val; }
+      var color = this.props.color;
+      var rgb = hsv2rgb(j.h||color.h, j.s||color.s, j.v||color.v);
+      var hex = rgb2hex(rgb.r, rgb.g, rgb.b);
+      this.props.onChange(objectAssign(color, j, rgb, {hex: hex}));
+    }
+  },
 
-    this.props.onChange(hsv2hex({
-      h: color.hsv.h,
-      s: s,
-      v: v
-    }), color.alpha);
+  changeRGB: function(p, val) {
+    if(this.props.onChange) {
+      var j = p; if(typeof j === 'string') { j = {}; j[p] = val; }
+      console.log(j);
+      var color = this.props.color;
+      var hsv = rgb2hsv(j.r||color.r, j.g||color.g, j.b||color.b);
+      this.props.onChange(objectAssign(color, j, hsv, {
+        hex: rgb2hex(j.r||color.r, j.g||color.g, j.b||color.b)
+      }));
+    }
+  },
+
+  changeAlpha: function(a) {
+    if(this.props.onChange) {
+      if(a <= 100 && a >= 0) {
+        this.props.onChange(objectAssign(this.props.color, {a: a}));
+      }
+    }
+  },
+
+  _onSVChange: function(pos) {
+    this.changeHSV({
+      s: pos.x,
+      v: 100-pos.y
+    });
   },
 
   _onHueChange: function(pos) {
-    var hue = pos.x;
-    var color = this.color;
-    this.props.onChange(hsv2hex({
-      h: hue,
-      s: color.hsv.s,
-      v: color.hsv.v
-    }), color.alpha);
+    this.changeHSV({
+      h: pos.x
+    });
   },
 
   _onAlphaChange: function(pos) {
-    var alpha = pos.x;
-    this.props.onChange('#'+this.color.hex, alpha);
+    this.changeHSV({
+      a: pos.x
+    });
+  },
+
+  _onHexChange: function(e) {
+    var hex = e.target.value.trim();
+    var rgb = hex2rgb(hex);
+    this.changeRGB(objectAssign(rgb, {hex: hex}));
   }
 });

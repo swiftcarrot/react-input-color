@@ -2,16 +2,9 @@
 <html>
 <head>
   <title>react-input-color</title>
-
   <script src="https://fb.me/react-0.13.1.js"></script>
   <script src="https://fb.me/JSXTransformer-0.13.1.js"></script>
   <script src="/builds/react-input-color.js"></script>
-
-  <style type="text/css">
-  *, *:before, *:after {
-    box-sizing: border-box;
-  }
-  </style>
 </head>
 <body>
 
@@ -22,22 +15,28 @@
 var App = React.createClass({
   getInitialState: function() {
     return {
-      color: '#3498db',
-      alpha: 100
+      color: {
+        hex: '3599db',
+        h: 204,
+        s: 76,
+        v: 86,
+        r: 53,
+        g: 153,
+        b: 219,
+        a: 100
+      }
     };
   },
 
   render: function() {
     return <InputColor
       color={this.state.color}
-      alpha={this.state.alpha}
       onChange={this._onChange}/>;
   },
 
-  _onChange: function(color, alpha) {
+  _onChange: function(color) {
     this.setState({
-      color: color,
-      alpha: alpha
+      color: color
     });
   }
 });
