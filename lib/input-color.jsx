@@ -33,7 +33,7 @@ module.exports = React.createClass({
     return {
       cssColor: cssColor,
       color: getColor(this.props.value),
-      colorPicker: true
+      colorPicker: false
     };
   },
 
