@@ -120,7 +120,6 @@ module.exports = React.createClass({
   changeRGB: function(p, val) {
     if(this.props.onChange) {
       var j = p; if(typeof j === 'string') { j = {}; j[p] = val; }
-      console.log(j);
       var color = this.props.color;
       var hsv = rgb2hsv(j.r||color.r, j.g||color.g, j.b||color.b);
       this.props.onChange(objectAssign(color, j, hsv, {

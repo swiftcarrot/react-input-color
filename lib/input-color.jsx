@@ -44,7 +44,6 @@ module.exports = React.createClass({
 
     return (
       <div className="m-input-color">
-        {this.state.colorPicker ? <ColorPicker color={this.state.color} onChange={this._onChange}/> : null}
         <div className="css-input-box">
           <div className="css-color"
             style={{background:rgbaBackground}}
@@ -52,6 +51,7 @@ module.exports = React.createClass({
           <input className="css-input" type="text" value={this.state.cssColor}
             onChange={this._onInputChange} onKeyUp={this._onInputKeyUp}/>
         </div>
+        {this.state.colorPicker ? <ColorPicker color={this.state.color} onChange={this._onChange}/> : null}
       </div>
     );
   },

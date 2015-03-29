@@ -3,6 +3,7 @@
 }
 
 .m-input-color {
+  position: relative;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -49,12 +50,12 @@
 
 
 .m-color-picker {
-  position: relative;
+  position: absolute;
+  top: 44px;
   width: 252px;
   height: 340px;
   padding: 10px;
   background-color: #f5f5f5;
-  border: 1px solid #979797;
 
   &:after {
     position: absolute;
@@ -62,11 +63,10 @@
     width: 0;
     height: 0;
     left: 5px;
-    bottom: -21px;
+    top: -20px;
     border-color: transparent;
     border-style: solid;
-    border-bottom-width: 0;
-    border-top-color: #ccc;
+    border-bottom-color: #f5f5f5;
     border-width: 10px;
     content: " ";
   }
