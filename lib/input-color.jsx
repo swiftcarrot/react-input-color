@@ -31,9 +31,9 @@ module.exports = React.createClass({
     var cssColor = this.props.color;
 
     return {
+      cssColor: cssColor,
       color: getColor(this.props.color),
-      colorPicker: true,
-      cssColor: cssColor
+      colorPicker: true
     };
   },
 
@@ -58,10 +58,16 @@ module.exports = React.createClass({
 
   componentWillReceiveProps: function(nextProps) {
     var cssColor = nextProps.color;
-    this.setState({
-      cssColor: cssColor,
-      color: getColor(cssColor)
-    });
+
+    // anti-pattern, maybe
+    if(!this._updated) {
+      this.setState({
+        cssColor: cssColor,
+        color: getColor(cssColor)
+      });
+    } else {
+      this._updated = false;
+    }
   },
 
   change: function(cssColor) {
@@ -87,6 +93,8 @@ module.exports = React.createClass({
       cssColor: '#'+color.hex,
       color: color
     });
+    this._updated = true;
+    this.change('#'+color.hex);
   },
 
   _onClick: function() {

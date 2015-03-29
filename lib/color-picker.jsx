@@ -75,7 +75,6 @@ module.exports = React.createClass({
             <span className="label">B</span>
           </div>
 
-          {/*
           <div className="input h">
             <InputNumber
               className="value" value={h}
@@ -92,9 +91,8 @@ module.exports = React.createClass({
             <InputNumber
               className="value" value={v}
               onChange={this.changeHSV.bind(null, 'v')}/>
-            <span className="label">B</span>
+            <span className="label">V</span>
           </div>
-          */}
 
           <div className="input a">
             <InputNumber
