@@ -1,6 +1,6 @@
 {
   "name": "react-input-color",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "react input color",
   "main": "index.js",
   "scripts": {
@@ -22,9 +22,10 @@
     "style-loader": "^0.8.3"
   },
   "dependencies": {
+    "color-parser": "^0.1.0",
     "object-assign": "^2.0.0",
     "react": "^0.13.1",
-    "react-input-number": "^1.0.1",
+    "react-input-number": "^1.0.2",
     "react-input-slider": "^1.0.0"
   },
   "directories": {
