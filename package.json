@@ -26,7 +26,7 @@
     "object-assign": "^2.0.0",
     "react": "^0.13.1",
     "react-input-number": "^1.0.2",
-    "react-input-slider": "^1.0.0"
+    "react-input-slider": "^1.0.1"
   },
   "directories": {
     "example": "example"

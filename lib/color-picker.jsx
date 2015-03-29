@@ -11,6 +11,12 @@ var rgb2hex = require('./rgb2hex');
 var hex2rgb = require('./hex2rgb');
 
 module.exports = React.createClass({
+  getInitialState: function() {
+    return {
+      hsvMode: false
+    };
+  },
+
   render: function () {
     var color = this.props.color;
     var r = color.r, g = color.g, b = color.b;
@@ -56,43 +62,49 @@ module.exports = React.createClass({
             <span className="label">Hex</span>
           </div>
 
-          <div className="input r">
-            <InputNumber
-              className="value" value={r}
-              onChange={this.changeRGB.bind(null, 'r')}/>
-            <span className="label">R</span>
+          {!this.state.hsvMode ? (
+          <div>
+            <div className="input r">
+              <InputNumber
+                className="value" value={r}
+                onChange={this.changeRGB.bind(null, 'r')}/>
+              <span className="label">R</span>
+            </div>
+            <div className="input g">
+              <InputNumber
+                className="value" value={g}
+                onChange={this.changeRGB.bind(null, 'g')}/>
+              <span className="label">G</span>
+            </div>
+            <div className="input b">
+              <InputNumber
+                className="value" value={b}
+                onChange={this.changeRGB.bind(null, 'b')}/>
+              <span className="label">B</span>
+            </div>
           </div>
-          <div className="input g">
-            <InputNumber
-              className="value" value={g}
-              onChange={this.changeRGB.bind(null, 'g')}/>
-            <span className="label">G</span>
+          ) : (
+          <div>
+            <div className="input h">
+              <InputNumber
+                className="value" value={h}
+                onChange={this.changeHSV.bind(null, 'h')}/>
+              <span className="label">H</span>
+            </div>
+            <div className="input s">
+              <InputNumber
+                className="value" value={s}
+                onChange={this.changeHSV.bind(null, 's')}/>
+              <span className="label">S</span>
+            </div>
+            <div className="input v">
+              <InputNumber
+                className="value" value={v}
+                onChange={this.changeHSV.bind(null, 'v')}/>
+              <span className="label">V</span>
+            </div>
           </div>
-          <div className="input b">
-            <InputNumber
-              className="value" value={b}
-              onChange={this.changeRGB.bind(null, 'b')}/>
-            <span className="label">B</span>
-          </div>
-
-          <div className="input h">
-            <InputNumber
-              className="value" value={h}
-              onChange={this.changeHSV.bind(null, 'h')}/>
-            <span className="label">H</span>
-          </div>
-          <div className="input s">
-            <InputNumber
-              className="value" value={s}
-              onChange={this.changeHSV.bind(null, 's')}/>
-            <span className="label">S</span>
-          </div>
-          <div className="input v">
-            <InputNumber
-              className="value" value={v}
-              onChange={this.changeHSV.bind(null, 'v')}/>
-            <span className="label">V</span>
-          </div>
+          )}
 
           <div className="input a">
             <InputNumber
