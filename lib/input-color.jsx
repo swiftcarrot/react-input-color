@@ -28,11 +28,11 @@ module.exports = React.createClass({
   displayName: 'InputColor',
 
   getInitialState: function() {
-    var cssColor = this.props.color;
+    var cssColor = this.props.value;
 
     return {
       cssColor: cssColor,
-      color: getColor(this.props.color),
+      color: getColor(this.props.value),
       colorPicker: true
     };
   },
@@ -57,7 +57,7 @@ module.exports = React.createClass({
   },
 
   componentWillReceiveProps: function(nextProps) {
-    var cssColor = nextProps.color;
+    var cssColor = nextProps.value;
 
     // anti-pattern, maybe
     if(!this._updated) {
