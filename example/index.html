@@ -2,54 +2,9 @@
 <html>
 <head>
   <title>react-input-color</title>
-  <script src="https://fb.me/react-0.13.1.js"></script>
-  <script src="https://fb.me/JSXTransformer-0.13.1.js"></script>
-  <script src="/builds/react-input-color.js"></script>
 </head>
 <body>
 
-<div id="target"></div>
-
-<script type="text/jsx">
-
-var App = React.createClass({
-  getInitialState: function() {
-    return {
-      color: '#3599db'
-    };
-  },
-
-  render: function() {
-    return (
-      <div>
-        <input type="color" value={this.state.color} onChange={this._onColorChange}/>
-        <div>Mattis Mollis Euismod Pellentesque Condimentum</div>
-        <div>{'color value: ' + this.state.color}</div>
-        <InputColor
-          value={this.state.color}
-          onChange={this._onChange}/>
-        <div>Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo.</div>
-      </div>
-    );
-  },
-
-  _onChange: function(color) {
-    this.setState({
-      color: color
-    });
-  },
-
-  _onColorChange: function(e) {
-    this.setState({
-      color: e.target.value
-    });
-  }
-});
-
-var target = document.getElementById('target');
-React.render(<App/>, target);
-
-</script>
-
+  <script src="/builds/app.js"></script>
 </body>
 </html>

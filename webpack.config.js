@@ -1,13 +1,9 @@
 module.exports = {
-  entry: './index.js',
+  entry: './example/app.jsx',
   output: {
-    path: __dirname + '/dist',
-    filename: 'react-input-color.js',
-    library: 'InputColor',
+    path: __dirname + '/builds',
+    filename: 'app.js',
     publicPath: "/builds/",
-  },
-  externals: {
-    "react": "React"
   },
   module: {
     loaders: [
