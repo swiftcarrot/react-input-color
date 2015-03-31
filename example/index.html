@@ -22,9 +22,9 @@ var App = React.createClass({
   render: function() {
     return (
       <div>
-        <input type="color" value={this.state.color}/>
+        <input type="color" value={this.state.color} onChange={this._onColorChange}/>
         <div>Mattis Mollis Euismod Pellentesque Condimentum</div>
-        <span>{'color value: ' + this.state.color}</span>
+        <div>{'color value: ' + this.state.color}</div>
         <InputColor
           value={this.state.color}
           onChange={this._onChange}/>
@@ -36,6 +36,12 @@ var App = React.createClass({
   _onChange: function(color) {
     this.setState({
       color: color
+    });
+  },
+
+  _onColorChange: function(e) {
+    this.setState({
+      color: e.target.value
     });
   }
 });

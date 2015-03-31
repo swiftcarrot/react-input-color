@@ -43,16 +43,12 @@ module.exports = React.createClass({
     var rgbaBackground = rgbaColor(r, g, b, a);
 
     return (
-      <div className="m-input-color">
-        <div className="css-input-box">
-          <div className="css-color"
-            style={{background:rgbaBackground}}
-            onClick={this._onClick}></div>
-          <input className="css-input" type="text" value={this.state.cssColor}
-            onChange={this._onInputChange} onKeyUp={this._onInputKeyUp}/>
-        </div>
+      <span className="m-input-color">
+        <span className="css-color"
+          style={{background:rgbaBackground}}
+          onClick={this._onClick}></span>
         {this.state.colorPicker ? <ColorPicker color={this.state.color} onChange={this._onChange}/> : null}
-      </div>
+      </span>
     );
   },
 
