@@ -12,13 +12,11 @@ var App = React.createClass({
   render: function() {
     return (
       <div>
+        <span>{'color value: ' + this.state.color}</span>
+        <br/><br/>
         <input type="color" value={this.state.color} onChange={this._onColorChange}/>
-        <div>Mattis Mollis Euismod Pellentesque Condimentum</div>
-        <div>{'color value: ' + this.state.color}</div>
-        <InputColor
-          value={this.state.color}
-          onChange={this._onChange}/>
-        <div>Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo.</div>
+        <br/><br/>
+        <InputColor value={this.state.color} onChange={this._onChange}/>
       </div>
     );
   },
