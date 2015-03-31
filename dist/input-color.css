@@ -59,6 +59,7 @@
   border: 2px solid #fff;
   border-radius: 50%;
   content: '';
+  box-sizing: border-box;
 }
 .m-color-picker {
   position: absolute;
@@ -127,6 +128,7 @@
 }
 .m-color-picker .input:last-child {
   margin-right: 0;
+  margin-left: 6px;
 }
 .m-color-picker .input .label {
   font-size: 13px;
@@ -138,6 +140,7 @@
   padding: 4px;
   line-height: 14px;
   border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 .m-color-picker .hex {
   width: 70px;

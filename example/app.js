@@ -1,5 +1,5 @@
 var React = require('react');
-var InputColor = require('../lib/input-color.jsx');
+var InputColor = require('../lib/input-color.js');
 require('!style!css!less!../lib/input-color.less');
 
 var App = React.createClass({
