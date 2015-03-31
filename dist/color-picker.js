@@ -10,9 +10,12 @@ var hsv2rgb = require('./hsv2rgb');
 var rgb2hex = require('./rgb2hex');
 var hex2rgb = require('./hex2rgb');
 
+var KEY_ENTER = 13;
+
 module.exports = React.createClass({displayName: "exports",
   getInitialState: function() {
     return {
+      hex: this.props.color.hex,
       hsvMode: false
     };
   },
@@ -58,7 +61,8 @@ module.exports = React.createClass({displayName: "exports",
 
         React.createElement("div", {className: "inputs"}, 
           React.createElement("div", {className: "input hex"}, 
-            React.createElement("input", {type: "text", className: "value", value: hex, onChange: this._onHexChange}), 
+            React.createElement("input", {type: "text", className: "value", value: this.state.hex, 
+              onChange: this._onHexChange, onKeyUp: this._onHexKeyUp}), 
             React.createElement("span", {className: "label"}, "Hex")
           ), 
 
@@ -117,6 +121,13 @@ module.exports = React.createClass({displayName: "exports",
     );
   },
 
+  componentWillReceiveProps: function(nextProps) {
+    var hex = nextProps.color.hex;
+    this.setState({
+      hex: hex
+    });
+  },
+
   changeHSV: function(p, val) {
     if(this.props.onChange) {
       var j = p; if(typeof j === 'string') { j = {}; j[p] = val; }
@@ -166,8 +177,16 @@ module.exports = React.createClass({displayName: "exports",
   },
 
   _onHexChange: function(e) {
-    var hex = e.target.value.trim();
-    var rgb = hex2rgb(hex);
-    this.changeRGB(objectAssign(rgb, {hex: hex}));
+    this.setState({
+      hex: e.target.value.trim()
+    });
+  },
+
+  _onHexKeyUp: function(e) {
+    if(e.keyCode === KEY_ENTER) {
+      var hex = e.target.value.trim();
+      var rgb = hex2rgb(hex);
+      this.changeRGB(objectAssign(rgb, {hex: hex}));
+    }
   }
 });

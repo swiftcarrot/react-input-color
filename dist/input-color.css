@@ -8,18 +8,19 @@
 .m-input-color {
   position: relative;
   display: inline-block;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   width: 42px;
   height: 22px;
   padding: 4px;
-  background-color: #ddd;
-  border-radius: 4px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  border: 1px solid #bebebe;
+  border-radius: 3px;
   box-sizing: border-box;
   user-select: none;
   -webkit-user-select: none;
 }
 .css-color {
-  display: inline-block;
+  display: block;
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -63,7 +64,7 @@
 }
 .m-color-picker {
   position: absolute;
-  top: 44px;
+  top: 37px;
   width: 252px;
   height: 340px;
   padding: 10px;
