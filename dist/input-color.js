@@ -91,9 +91,11 @@ module.exports = React.createClass({
     var rect = dom.getBoundingClientRect();
     var ww = window.innerWidth;
 
-    var left = 0;
-    if(rect.right+210 > ww) {
-      left = -212;
+    var left = -105;
+    if(rect.right+105 > ww) {
+      left = -210+ww-rect.right;
+    } else if(rect.left-105 < 0) {
+      left = -rect.left;
     }
 
     this.setState({
