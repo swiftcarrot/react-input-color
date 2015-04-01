@@ -33,7 +33,7 @@ module.exports = React.createClass({displayName: "exports",
     var hueBackground = '#'+hsv2hex(h, 100, 100);
 
     return (
-      React.createElement("div", {className: "m-color-picker"}, 
+      React.createElement("div", {className: "m-color-picker", style: {left: this.props.left}}, 
         React.createElement("div", {className: "selector", 
         style: {backgroundColor: hueBackground}}, 
           React.createElement("div", {className: "gradient white"}), 
