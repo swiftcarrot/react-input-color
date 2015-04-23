@@ -5,8 +5,5 @@ React input color component
 ``` sh
 npm install react-input-color --save
 ```
-
 ## Usage
 Check [example](https://github.com/wangzuo/react-input-color/blob/master/example/app.js)
-
-![http://forthebadge.com/](http://forthebadge.com/images/badges/designed-in-ms-paint.svg)
