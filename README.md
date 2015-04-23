@@ -1,4 +1,12 @@
 # react-input-color
-React input color
+React input color component
 
-[![NPM](https://nodei.co/npm/react-input-color.png?compact=true)](https://nodei.co/npm/react-input-color/)
+## Installation
+``` sh
+npm install react-input-color --save
+```
+
+## Usage
+Check [example](https://github.com/wangzuo/react-input-color/blob/master/example/app.js)
+
+![http://forthebadge.com/](http://forthebadge.com/images/badges/designed-in-ms-paint.svg)
