@@ -1,6 +1,7 @@
 # react-input-color
 React input color component
 
+![screenshot](https://raw.githubusercontent.com/wangzuo/react-input-color/master/screenshot.png)
 ## Installation
 ``` sh
 npm install react-input-color --save
