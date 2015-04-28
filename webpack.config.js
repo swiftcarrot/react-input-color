@@ -7,8 +7,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.jsx?$/, loader: "jsx-loader" },
-      { test: /\.less$/, loader: "style-loader!css-loader!less-loader" }
+      {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
+      {test: /\.less$/, loader: "style-loader!css-loader!less-loader"}
     ]
   },
   devtool: "source-map"
