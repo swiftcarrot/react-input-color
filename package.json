@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "classnames": "^1.2.1",
+    "color-functions": "^1.0.1",
     "color-parser": "^0.1.0",
     "object-assign": "^2.0.0",
     "react-input-number": "^1.0.3",

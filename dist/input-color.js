@@ -6,9 +6,9 @@ var objectAssign = require('object-assign');
 var colorParser = require('color-parser');
 
 var ColorPicker = require('./color-picker.js');
-var rgbaColor = require('./rgba-color');
-var rgb2hsv = require('./rgb2hsv');
-var rgb2hex = require('./rgb2hex');
+var rgbaColor = require('color-functions/lib/rgba');
+var rgb2hsv = require('color-functions/lib/rgb2hsv');
+var rgb2hex = require('color-functions/lib/rgb2hex');
 
 var KEY_ENTER = 13;
 
