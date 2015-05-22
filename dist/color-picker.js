@@ -200,11 +200,14 @@ module.exports = React.createClass({
       var j = p;if (typeof j === 'string') {
         j = {};j[p] = val;
       }
+
       var color = this.props.color;
-      var hsv = rgb2hsv(j.r || color.r, j.g || color.g, j.b || color.b);
-      this.props.onChange(objectAssign(color, j, hsv, {
-        hex: rgb2hex(j.r || color.r, j.g || color.g, j.b || color.b)
-      }));
+      var rgb = [j.r !== void 0 ? j.r : color.r, j.g !== void 0 ? j.g : color.g, j.b !== void 0 ? j.b : color.b];
+
+      var hsv = rgb2hsv.apply(null, rgb);
+      var hex = rgb2hex.apply(null, rgb);
+
+      this.props.onChange(objectAssign(color, j, hsv, { hex: hex }));
     }
   },
 
