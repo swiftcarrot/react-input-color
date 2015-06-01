@@ -58,7 +58,7 @@ module.exports = React.createClass({
         { className: 'sliders' },
         React.createElement(InputSlider, {
           className: 'slider-x hue',
-          axis: 'x', x: h, xmax: 360,
+          axis: 'x', x: h, xmax: 359,
           onChange: this._onHueChange }),
         React.createElement(InputSlider, {
           className: 'slider-x opacity',
