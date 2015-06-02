@@ -49,6 +49,7 @@ module.exports = React.createClass({
         React.createElement('div', { className: 'gradient white' }),
         React.createElement('div', { className: 'gradient dark' }),
         React.createElement(InputSlider, { className: 'slider-xy',
+          axis: 'xy',
           x: s, xmax: 100,
           y: 100 - v, ymax: 100,
           onChange: this._onSVChange })
