@@ -12,9 +12,10 @@
 .m-input-color {
   position: relative;
   display: inline-block;
-  width: 42px;
-  height: 22px;
+  width: 49px;
+  height: 24px;
   padding: 4px;
+  padding-right: 15px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #ffffff;
   border: 1px solid #bebebe;
@@ -34,6 +35,13 @@
   border-bottom-color: #f5f5f5;
   border-width: 10px;
   content: " ";
+}
+.m-input-color .remove {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 3px;
+  cursor: pointer;
 }
 .css-color {
   display: block;

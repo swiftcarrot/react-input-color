@@ -2,62 +2,89 @@
 
 var cx = require('classnames');
 var React = require('react');
-var objectAssign = require('object-assign');
+var assign = require('object-assign');
 var colorParser = require('color-parser');
-
-var ColorPicker = require('./color-picker.js');
 var rgbaColor = require('color-functions/lib/rgba');
 var rgb2hsv = require('color-functions/lib/rgb2hsv');
 var rgb2hex = require('color-functions/lib/rgb2hex');
 
+var ColorPicker = require('./color-picker.js');
+
 var KEY_ENTER = 13;
-
-function getColor(cssColor) {
-  var rgba = colorParser(cssColor);
-  var r = rgba.r,
-      g = rgba.g,
-      b = rgba.b,
-      a = rgba.a * 100;
-  var hsv = rgb2hsv(r, g, b);
-
-  return objectAssign(hsv, {
-    r: r,
-    g: g,
-    b: b,
-    a: a,
-    hex: rgb2hex(r, g, b)
-  });
-}
 
 module.exports = React.createClass({
   displayName: 'InputColor',
+
+  propTypes: {
+    value: React.PropTypes.string,
+    defaultValue: React.PropTypes.string
+  },
+
+  getDefaultProps: function getDefaultProps() {
+    return {
+      defaultValue: '#000000'
+    };
+  },
 
   getInitialState: function getInitialState() {
     var cssColor = this.props.value;
 
     return {
-      color: getColor(this.props.value),
+      color: this.getColor(this.props.value),
       colorPicker: false,
       colorPickerPosition: 0
     };
   },
 
+  getColor: function getColor(cssColor) {
+    cssColor = cssColor || this.props.defaultValue;
+
+    var rgba = colorParser(cssColor);
+    var r = rgba.r,
+        g = rgba.g,
+        b = rgba.b,
+        a = rgba.a * 100;
+    var hsv = rgb2hsv(r, g, b);
+
+    return assign(hsv, {
+      r: r,
+      g: g,
+      b: b,
+      a: a,
+      hex: rgb2hex(r, g, b)
+    });
+  },
+
+  getRgbaBackground: function getRgbaBackground() {
+    var color = this.state.color;
+    var r = color.r;
+    var g = color.g;
+    var b = color.b;
+    var a = color.a;
+    return rgbaColor(r, g, b, a);
+  },
+
   render: function render() {
     var color = this.state.color;
-    var r = color.r,
-        g = color.g,
-        b = color.b,
-        a = color.a;
-    var rgbaBackground = rgbaColor(r, g, b, a);
+    var rgbaBackground = this.getRgbaBackground();
 
     return React.createElement(
       'span',
       { className: cx({
           'm-input-color': true,
           'color-picker-open': this.state.colorPicker
-        }), onClick: this._onClick },
-      React.createElement('span', { className: 'css-color',
-        style: { background: rgbaBackground } }),
+        }) },
+      React.createElement('span', {
+        className: 'css-color',
+        style: { background: rgbaBackground },
+        onClick: this._onClick }),
+      React.createElement(
+        'span',
+        {
+          className: 'remove',
+          onClick: this.handleClickRemove },
+        '×'
+      ),
       this.state.colorPicker ? React.createElement(ColorPicker, {
         left: this.state.colorPickerPosition,
         color: this.state.color,
@@ -83,7 +110,7 @@ module.exports = React.createClass({
     // anti-pattern, maybe
     if (!this._updated) {
       this.setState({
-        color: getColor(cssColor)
+        color: this.getColor(cssColor)
       });
     } else {
       this._updated = false;
@@ -123,5 +150,9 @@ module.exports = React.createClass({
       colorPicker: !this.state.colorPicker,
       colorPickerPosition: left
     });
+  },
+
+  handleClickRemove: function handleClickRemove(e) {
+    this.change('');
   }
 });
