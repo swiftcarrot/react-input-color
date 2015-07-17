@@ -1,18 +1,18 @@
 {
   "name": "react-input-color",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "description": "React input color component with hsv color picker",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "react",
-    "react-component",
     "color",
+    "color-picker",
     "input",
     "picker",
-    "color-picker"
+    "react",
+    "react-component"
   ],
   "author": "Wang Zuo",
   "license": "MIT",
@@ -31,7 +31,7 @@
     "color-parser": "^0.1.0",
     "object-assign": "^2.0.0",
     "react-input-number": "^1.2.2",
-    "react-input-slider": "^1.0.5"
+    "react-input-slider": "^1.0.6"
   },
   "peerDependencies": {
     "react": "^0.13.1"
