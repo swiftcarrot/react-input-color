@@ -7,6 +7,8 @@ React input color component with hsv color picker
 npm install react-input-color --save
 ```
 ### Demo
-[https://wangzuo.github.io/react-input-color/](https://wangzuo.github.io/react-input-color/)
+[https://wangzuo.github.io/react-input-color/example](https://wangzuo.github.io/react-input-color/example)
 ### Usage
-Check [example](https://github.com/wangzuo/react-input-color/blob/master/example/app.js)
+Check [example](https://github.com/wangzuo/react-input-color/blob/gh-pages/example/app.js)
+### License
+MIT
