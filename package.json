@@ -4,6 +4,7 @@
   "description": "React input color component with hsv color picker",
   "main": "index.js",
   "scripts": {
+  	"start": "webpack-dev-server -c --port=7788",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -31,7 +32,7 @@
     "color-parser": "^0.1.0",
     "object-assign": "^2.0.0",
     "react-input-number": "^1.2.2",
-    "react-input-slider": "^1.0.7"
+    "react-input-slider": "^1.1.1"
   },
   "peerDependencies": {
     "react": "^0.13.1"
