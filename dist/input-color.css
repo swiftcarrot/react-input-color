@@ -36,13 +36,20 @@
   right: 3px;
   cursor: pointer;
 }
-.css-color {
+.m-input-color .css-color {
   display: block;
   width: 100%;
   height: 100%;
   cursor: pointer;
 }
-.slider-x {
+.m-input-color .slider {
+  background: none;
+  border-radius: 0;
+}
+.m-input-color .value {
+  display: none;
+}
+.m-input-color .slider-x {
   position: relative;
   width: 190px;
   height: 12px;
@@ -51,22 +58,29 @@
   -webkit-user-select: none;
   border: 1px solid #aaa;
 }
-.slider-x .handle {
+.m-input-color .slider-x .handle {
   position: absolute;
+}
+.m-input-color .slider-x .handle:after {
+  position: absolute;
+  top: -1px;
+  left: -3px;
   width: 5px;
   height: 12px;
   border: 1px solid #aaa;
+  border-radius: 0;
   background-color: #eee;
+  content: '';
 }
-.slider-xy {
+.m-input-color .slider-xy {
   position: relative;
   width: 100%;
   height: 100%;
 }
-.slider-xy .handle {
+.m-input-color .slider-xy .handle {
   position: absolute;
 }
-.slider-xy .handle:after {
+.m-input-color .slider-xy .handle:after {
   position: relative;
   display: block;
   top: -4px;

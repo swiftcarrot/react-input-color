@@ -48,24 +48,28 @@ module.exports = React.createClass({
           style: { backgroundColor: hueBackground } },
         React.createElement('div', { className: 'gradient white' }),
         React.createElement('div', { className: 'gradient dark' }),
-        React.createElement(InputSlider, { className: 'slider-xy',
+        React.createElement(InputSlider, {
+          className: 'slider slider-xy',
           axis: 'xy',
           x: s, xmax: 100,
           y: 100 - v, ymax: 100,
-          onChange: this._onSVChange })
+          onChange: this._onSVChange
+        })
       ),
       React.createElement(
         'div',
         { className: 'sliders' },
         React.createElement(InputSlider, {
-          className: 'slider-x hue',
+          className: 'slider slider-x hue',
           axis: 'x', x: h, xmax: 359,
-          onChange: this._onHueChange }),
+          onChange: this._onHueChange
+        }),
         React.createElement(InputSlider, {
-          className: 'slider-x opacity',
+          className: 'slider slider-x opacity',
           axis: 'x', x: a, xmax: 100,
           style: { background: opacityGradient },
-          onChange: this._onAlphaChange }),
+          onChange: this._onAlphaChange
+        }),
         React.createElement('div', { className: 'color', style: { backgroundColor: rgbaBackground } })
       ),
       React.createElement(
