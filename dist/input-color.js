@@ -75,13 +75,13 @@ module.exports = React.createClass({
           'color-picker-open': this.state.colorPicker
         }) },
       React.createElement('span', {
-        className: 'css-color',
+        className: "css-color",
         style: { background: rgbaBackground },
         onClick: this._onClick }),
       React.createElement(
         'span',
         {
-          className: 'remove',
+          className: "remove",
           onClick: this.handleClickRemove },
         '×'
       ),
