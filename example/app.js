@@ -5,13 +5,13 @@ var React = require('react');
 var InputColor = require('../lib/input-color.js');
 
 var App = React.createClass({
-  getInitialState: function() {
+  getInitialState() {
     return {
       color: '#3599db'
     };
   },
 
-  render: function() {
+  render() {
     return (
       <div>
         <div className="target" style={{width:100,height:100,background:this.state.color}}></div>
@@ -21,27 +21,29 @@ var App = React.createClass({
           type="color"
           value={this.state.color}
           defaultValue="#345678"
-          onChange={this._onColorChange}/>
+          onChange={this._onColorChange}
+        />
         <br/><br/>
         <InputColor
           value={this.state.color}
           defaultValue="#345678"
-          onChange={this._onChange}/>
+          onChange={this._onChange}
+        />
       </div>
     );
   },
 
-  _onChange: function(color) {
+  _onChange(color) {
     this.setState({
       color: color
     });
   },
 
-  _onColorChange: function(e) {
+  _onColorChange(e) {
     this.setState({
       color: e.target.value
     });
   }
 });
 
-React.render(<App/>, document.body);
+React.render(<App/>, document.getElementById('app'));

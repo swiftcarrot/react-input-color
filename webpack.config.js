@@ -12,5 +12,8 @@ module.exports = {
       {test: /\.less$/, loader: "style-loader!css-loader!less-loader"}
     ]
   },
+  externals: {
+    'react': 'React'
+  },
   devtool: "source-map"
 };
