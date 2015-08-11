@@ -70,14 +70,14 @@ module.exports = React.createClass({
 
     return React.createElement(
       'span',
-      { className: cx({
-          'm-input-color': true,
+      { className: cx('m-input-color', {
           'color-picker-open': this.state.colorPicker
         }) },
       React.createElement('span', {
         className: "css-color",
         style: { background: rgbaBackground },
-        onClick: this._onClick }),
+        onClick: this._onClick
+      }),
       React.createElement(
         'span',
         {
