@@ -9,6 +9,9 @@ npm install react-input-color --save
 ### Demo
 [https://wangzuo.github.io/react-input-color/example](https://wangzuo.github.io/react-input-color/example)
 ### Usage
+
+Check [app.js](https://github.com/wangzuo/react-input-color/blob/gh-pages/example/app.js) for a working example.
+
 ``` javascript
 var InputColor = require('react-input-color');
 
@@ -18,6 +21,10 @@ var InputColor = require('react-input-color');
   onChange={this.handleChange} // change state.color in handleChange
 />
 ```
-Check [app.js](https://github.com/wangzuo/react-input-color/blob/gh-pages/example/app.js) for a working example
+
++ The color property can be any valid css color value, check
+[color-functions](https://github.com/pqx/color-functions) for more details.
++ This component is built with [react-input-slider](https://github.com/wangzuo/react-input-slider) and [react-input-number](https://github.com/wangzuo/react-input-number).
+
 ### License
 MIT

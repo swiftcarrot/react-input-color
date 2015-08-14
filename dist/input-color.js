@@ -3,7 +3,7 @@
 var cx = require('classnames');
 var React = require('react');
 var assign = require('object-assign');
-var colorParser = require('color-parser');
+var cssColor = require('color-functions/lib/css-color');
 var rgbaColor = require('color-functions/lib/rgba');
 var rgb2hsv = require('color-functions/lib/rgb2hsv');
 var rgb2hex = require('color-functions/lib/rgb2hex');
@@ -36,10 +36,10 @@ module.exports = React.createClass({
     };
   },
 
-  getColor: function getColor(cssColor) {
-    cssColor = cssColor || this.props.defaultValue;
+  getColor: function getColor(color) {
+    color = color || this.props.defaultValue;
 
-    var rgba = colorParser(cssColor);
+    var rgba = cssColor(color);
     var r = rgba.r,
         g = rgba.g,
         b = rgba.b,

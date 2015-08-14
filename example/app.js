@@ -13,7 +13,7 @@ var App = React.createClass({
 
   render() {
     return (
-      <div>
+      <div className="app">
         <div className="target" style={{width:100,height:100,background:this.state.color}}></div>
         <span>{'color value: ' + this.state.color}</span>
         <br/><br/>

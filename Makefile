@@ -4,3 +4,4 @@ all:
 	webpack -p
 clean:
 	rm dist/*
+	rm example/bundle*
