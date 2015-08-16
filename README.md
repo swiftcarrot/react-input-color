@@ -1,6 +1,8 @@
 # react-input-color
 React input color component with hsv color picker
 
+The color picker is inspired by the [sketch](http://bohemiancoding.com/sketch/) color picker
+
 ![screenshot](https://raw.githubusercontent.com/wangzuo/react-input-color/gh-pages/screenshot.png)
 ### Installation
 ``` sh
