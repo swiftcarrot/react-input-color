@@ -7,6 +7,7 @@ var cssColor = require('color-functions/lib/css-color');
 var rgbaColor = require('color-functions/lib/rgba');
 var rgb2hsv = require('color-functions/lib/rgb2hsv');
 var rgb2hex = require('color-functions/lib/rgb2hex');
+var rgba2hex = require('color-functions/lib/rgba2hex');
 
 var ColorPicker = require('./color-picker.js');
 
@@ -43,7 +44,7 @@ module.exports = React.createClass({
     var r = rgba.r,
         g = rgba.g,
         b = rgba.b,
-        a = rgba.a * 100;
+        a = rgba.a;
     var hsv = rgb2hsv(r, g, b);
 
     return assign(hsv, {
@@ -74,14 +75,14 @@ module.exports = React.createClass({
           'color-picker-open': this.state.colorPicker
         }) },
       React.createElement('span', {
-        className: "css-color",
+        className: 'css-color',
         style: { background: rgbaBackground },
         onClick: this._onClick
       }),
       React.createElement(
         'span',
         {
-          className: "remove",
+          className: 'remove',
           onClick: this.handleClickRemove },
         '×'
       ),
@@ -128,8 +129,9 @@ module.exports = React.createClass({
       cssColor: '#' + color.hex,
       color: color
     });
+
     this._updated = true;
-    this.change('#' + color.hex);
+    this.change('#' + rgba2hex(color.r, color.g, color.b, color.a));
   },
 
   _onClick: function _onClick(e) {

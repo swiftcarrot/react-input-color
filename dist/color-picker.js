@@ -41,16 +41,16 @@ module.exports = React.createClass({
 
     return React.createElement(
       'div',
-      { className: "m-color-picker", style: { left: this.props.left }, onClick: this._onClick },
+      { className: 'm-color-picker', style: { left: this.props.left }, onClick: this._onClick },
       React.createElement(
         'div',
-        { className: "selector",
+        { className: 'selector',
           style: { backgroundColor: hueBackground } },
-        React.createElement('div', { className: "gradient white" }),
-        React.createElement('div', { className: "gradient dark" }),
+        React.createElement('div', { className: 'gradient white' }),
+        React.createElement('div', { className: 'gradient dark' }),
         React.createElement(InputSlider, {
-          className: "slider slider-xy",
-          axis: "xy",
+          className: 'slider slider-xy',
+          axis: 'xy',
           x: s, xmax: 100,
           y: 100 - v, ymax: 100,
           onChange: this._onSVChange
@@ -58,31 +58,31 @@ module.exports = React.createClass({
       ),
       React.createElement(
         'div',
-        { className: "sliders" },
+        { className: 'sliders' },
         React.createElement(InputSlider, {
-          className: "slider slider-x hue",
-          axis: "x", x: h, xmax: 359,
+          className: 'slider slider-x hue',
+          axis: 'x', x: h, xmax: 359,
           onChange: this._onHueChange
         }),
         React.createElement(InputSlider, {
-          className: "slider slider-x opacity",
-          axis: "x", x: a, xmax: 100,
+          className: 'slider slider-x opacity',
+          axis: 'x', x: a, xmax: 100,
           style: { background: opacityGradient },
           onChange: this._onAlphaChange
         }),
-        React.createElement('div', { className: "color", style: { backgroundColor: rgbaBackground } })
+        React.createElement('div', { className: 'color', style: { backgroundColor: rgbaBackground } })
       ),
       React.createElement(
         'div',
-        { className: "inputs" },
+        { className: 'inputs' },
         React.createElement(
           'div',
-          { className: "input hex" },
-          React.createElement('input', { type: "text", className: "value", value: this.state.hex,
+          { className: 'input hex' },
+          React.createElement('input', { type: 'text', className: 'value', value: this.state.hex,
             onChange: this._onHexChange, onKeyUp: this._onHexKeyUp }),
           React.createElement(
             'span',
-            { className: "label" },
+            { className: 'label' },
             'Hex'
           )
         ),
@@ -91,37 +91,37 @@ module.exports = React.createClass({
           null,
           React.createElement(
             'div',
-            { className: "input r" },
+            { className: 'input r' },
             React.createElement(InputNumber, {
-              className: "value", value: r,
+              className: 'value', value: r,
               onChange: this.changeRGB.bind(null, 'r') }),
             React.createElement(
               'span',
-              { className: "label" },
+              { className: 'label' },
               'R'
             )
           ),
           React.createElement(
             'div',
-            { className: "input g" },
+            { className: 'input g' },
             React.createElement(InputNumber, {
-              className: "value", value: g,
+              className: 'value', value: g,
               onChange: this.changeRGB.bind(null, 'g') }),
             React.createElement(
               'span',
-              { className: "label" },
+              { className: 'label' },
               'G'
             )
           ),
           React.createElement(
             'div',
-            { className: "input b" },
+            { className: 'input b' },
             React.createElement(InputNumber, {
-              className: "value", value: b,
+              className: 'value', value: b,
               onChange: this.changeRGB.bind(null, 'b') }),
             React.createElement(
               'span',
-              { className: "label" },
+              { className: 'label' },
               'B'
             )
           )
@@ -130,50 +130,50 @@ module.exports = React.createClass({
           null,
           React.createElement(
             'div',
-            { className: "input h" },
+            { className: 'input h' },
             React.createElement(InputNumber, {
-              className: "value", value: h,
+              className: 'value', value: h,
               onChange: this.changeHSV.bind(null, 'h') }),
             React.createElement(
               'span',
-              { className: "label" },
+              { className: 'label' },
               'H'
             )
           ),
           React.createElement(
             'div',
-            { className: "input s" },
+            { className: 'input s' },
             React.createElement(InputNumber, {
-              className: "value", value: s,
+              className: 'value', value: s,
               onChange: this.changeHSV.bind(null, 's') }),
             React.createElement(
               'span',
-              { className: "label" },
+              { className: 'label' },
               'S'
             )
           ),
           React.createElement(
             'div',
-            { className: "input v" },
+            { className: 'input v' },
             React.createElement(InputNumber, {
-              className: "value", value: v,
+              className: 'value', value: v,
               onChange: this.changeHSV.bind(null, 'v') }),
             React.createElement(
               'span',
-              { className: "label" },
+              { className: 'label' },
               'V'
             )
           )
         ),
         React.createElement(
           'div',
-          { className: "input a" },
+          { className: 'input a' },
           React.createElement(InputNumber, {
-            className: "value", value: a,
+            className: 'value', value: a,
             onChange: this.changeAlpha }),
           React.createElement(
             'span',
-            { className: "label" },
+            { className: 'label' },
             'A'
           )
         )
@@ -239,7 +239,7 @@ module.exports = React.createClass({
 
   _onAlphaChange: function _onAlphaChange(pos) {
     this.changeHSV({
-      a: pos.x
+      a: parseInt(pos.x, 10)
     });
   },
 
