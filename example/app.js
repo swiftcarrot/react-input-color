@@ -2,6 +2,7 @@ require('../lib/input-color.less');
 require('./app.less');
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var InputColor = require('../lib/input-color.js');
 
 var App = React.createClass({
@@ -46,4 +47,4 @@ var App = React.createClass({
   }
 });
 
-React.render(<App/>, document.getElementById('app'));
+ReactDOM.render(<App/>, document.getElementById('app'));
