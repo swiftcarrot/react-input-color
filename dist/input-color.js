@@ -2,6 +2,7 @@
 
 var cx = require('classnames');
 var React = require('react');
+var ReactDOM = require('react-dom');
 var assign = require('object-assign');
 var cssColor = require('color-functions/lib/css-color');
 var rgbaColor = require('color-functions/lib/rgba');
@@ -137,7 +138,7 @@ module.exports = React.createClass({
   _onClick: function _onClick(e) {
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation();
-    var dom = React.findDOMNode(this);
+    var dom = ReactDOM.findDOMNode(this);
     var rect = dom.getBoundingClientRect();
     var ww = window.innerWidth;
 
