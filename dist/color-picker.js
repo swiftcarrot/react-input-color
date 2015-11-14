@@ -23,7 +23,6 @@ module.exports = React.createClass({
       hsvMode: false
     };
   },
-
   render: function render() {
     var color = this.props.color;
     var r = color.r,
@@ -180,14 +179,12 @@ module.exports = React.createClass({
       )
     );
   },
-
   componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
     var hex = nextProps.color.hex;
     this.setState({
       hex: hex
     });
   },
-
   changeHSV: function changeHSV(p, val) {
     if (this.props.onChange) {
       var j = p;if (typeof j === 'string') {
@@ -199,7 +196,6 @@ module.exports = React.createClass({
       this.props.onChange(objectAssign(color, j, rgb, { hex: hex }));
     }
   },
-
   changeRGB: function changeRGB(p, val) {
     if (this.props.onChange) {
       var j = p;if (typeof j === 'string') {
@@ -215,7 +211,6 @@ module.exports = React.createClass({
       this.props.onChange(objectAssign(color, j, hsv, { hex: hex }));
     }
   },
-
   changeAlpha: function changeAlpha(a) {
     if (this.props.onChange) {
       if (a <= 100 && a >= 0) {
@@ -223,32 +218,27 @@ module.exports = React.createClass({
       }
     }
   },
-
   _onSVChange: function _onSVChange(pos) {
     this.changeHSV({
       s: pos.x,
       v: 100 - pos.y
     });
   },
-
   _onHueChange: function _onHueChange(pos) {
     this.changeHSV({
       h: pos.x
     });
   },
-
   _onAlphaChange: function _onAlphaChange(pos) {
     this.changeHSV({
       a: parseInt(pos.x, 10)
     });
   },
-
   _onHexChange: function _onHexChange(e) {
     this.setState({
       hex: e.target.value.trim()
     });
   },
-
   _onHexKeyUp: function _onHexKeyUp(e) {
     if (e.keyCode === KEY_ENTER) {
       var hex = e.target.value.trim();
@@ -256,7 +246,6 @@ module.exports = React.createClass({
       this.changeRGB(objectAssign(rgb, { hex: hex }));
     }
   },
-
   _onClick: function _onClick(e) {
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation();

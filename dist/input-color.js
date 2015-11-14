@@ -27,7 +27,6 @@ module.exports = React.createClass({
       defaultValue: '#000000'
     };
   },
-
   getInitialState: function getInitialState() {
     var cssColor = this.props.value;
 
@@ -37,7 +36,6 @@ module.exports = React.createClass({
       colorPickerPosition: 0
     };
   },
-
   getColor: function getColor(color) {
     color = color || this.props.defaultValue;
 
@@ -56,7 +54,6 @@ module.exports = React.createClass({
       hex: rgb2hex(r, g, b)
     });
   },
-
   getRgbaBackground: function getRgbaBackground() {
     var color = this.state.color;
     var r = color.r;
@@ -65,7 +62,6 @@ module.exports = React.createClass({
     var a = color.a;
     return rgbaColor(r, g, b, a);
   },
-
   render: function render() {
     var color = this.state.color;
     var rgbaBackground = this.getRgbaBackground();
@@ -93,19 +89,15 @@ module.exports = React.createClass({
         onChange: this._onChange }) : null
     );
   },
-
   componentDidMount: function componentDidMount() {
     document.addEventListener('click', this.closeColorPicker, false);
   },
-
   componentWillUnmount: function componentWillUnmount() {
     document.removeEventListener('click', this.closeColorPicker);
   },
-
   closeColorPicker: function closeColorPicker() {
     this.setState({ colorPicker: false });
   },
-
   componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
     var cssColor = nextProps.value;
 
@@ -118,13 +110,11 @@ module.exports = React.createClass({
       this._updated = false;
     }
   },
-
   change: function change(cssColor) {
     if (this.props.onChange) {
       this.props.onChange(cssColor);
     }
   },
-
   _onChange: function _onChange(color) {
     this.setState({
       cssColor: '#' + color.hex,
@@ -134,7 +124,6 @@ module.exports = React.createClass({
     this._updated = true;
     this.change('#' + rgba2hex(color.r, color.g, color.b, color.a));
   },
-
   _onClick: function _onClick(e) {
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation();
@@ -154,7 +143,6 @@ module.exports = React.createClass({
       colorPickerPosition: left
     });
   },
-
   handleClickRemove: function handleClickRemove(e) {
     this.change('');
   }
