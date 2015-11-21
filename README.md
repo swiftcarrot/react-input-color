@@ -3,16 +3,16 @@ React input color component with hsv color picker
 
 The color picker is inspired by the [sketch](http://bohemiancoding.com/sketch/) color picker
 
-![screenshot](https://raw.githubusercontent.com/wangzuo/react-input-color/gh-pages/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/wangzuo/react-input-color/master/screenshot.png)
 ### Installation
 ``` sh
 npm install react-input-color --save
 ```
 ### Demo
-[https://wangzuo.github.io/react-input-color/example](https://wangzuo.github.io/react-input-color/example)
+[https://wangzuo.github.io/react-input-color](https://wangzuo.github.io/react-input-color)
 ### Usage
 
-Check [app.js](https://github.com/wangzuo/react-input-color/blob/gh-pages/example/app.js) for a working example.
+Check [app.js](https://github.com/wangzuo/react-input-color/blob/master/example/app.js) for a working example.
 
 ``` javascript
 var InputColor = require('react-input-color');
