@@ -1,12 +1,12 @@
 {
   "name": "react-input-color",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "React input color component with hsv color picker",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server -c --port=8888",
     "build": "make",
-    "deploy": "npm run build && gihub-pages-deploy"
+    "deploy": "npm run build && github-pages-deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "github-pages-deploy": {
