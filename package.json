@@ -29,7 +29,7 @@
     "babel-preset-react": "^6.1.18",
     "css-loader": "^0.23.0",
     "github-pages-deploy": "0.0.3",
-    "less": "^2.4.0",
+    "less": "^2.7.1",
     "less-loader": "^2.1.0",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.8"
