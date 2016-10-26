@@ -32,7 +32,7 @@
     "less": "^2.4.0",
     "less-loader": "^2.1.0",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.8"
+    "webpack": "^1.13.3"
   },
   "dependencies": {
     "classnames": "^2.1.3",
