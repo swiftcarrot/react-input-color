@@ -81,7 +81,7 @@ module.exports = React.createClass({
         {
           className: 'remove',
           onClick: this.handleClickRemove },
-        '×'
+        '\xD7'
       ),
       this.state.colorPicker ? React.createElement(ColorPicker, {
         left: this.state.colorPickerPosition,

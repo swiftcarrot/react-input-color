@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render 1`] = `
+<span
+  className="m-input-color"
+>
+  <span
+    className="css-color"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "rgba(52,152,219,1)",
+      }
+    }
+  />
+  <span
+    className="remove"
+    onClick={[Function]}
+  >
+    ×
+  </span>
+</span>
+`;
