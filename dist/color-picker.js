@@ -5,12 +5,12 @@ var objectAssign = require('object-assign');
 var InputSlider = require('react-input-slider');
 var InputNumber = require('react-input-number');
 
-var rgb2hsv = require('color-functions/lib/rgb2hsv');
-var hsv2hex = require('color-functions/lib/hsv2hex');
-var hsv2rgb = require('color-functions/lib/hsv2rgb');
-var rgb2hex = require('color-functions/lib/rgb2hex');
-var hex2rgb = require('color-functions/lib/hex2rgb');
-var rgba = require('color-functions/lib/rgba');
+var rgb2hsv = require('color-functions/dist/rgb2hsv');
+var hsv2hex = require('color-functions/dist/hsv2hex');
+var hsv2rgb = require('color-functions/dist/hsv2rgb');
+var rgb2hex = require('color-functions/dist/rgb2hex');
+var hex2rgb = require('color-functions/dist/hex2rgb');
+var rgba = require('color-functions/dist/rgba');
 
 var KEY_ENTER = 13;
 
