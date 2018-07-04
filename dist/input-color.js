@@ -4,11 +4,11 @@ var cx = require('classnames');
 var React = require('react');
 var ReactDOM = require('react-dom');
 var assign = require('object-assign');
-var cssColor = require('color-functions/lib/css-color');
-var rgbaColor = require('color-functions/lib/rgba');
-var rgb2hsv = require('color-functions/lib/rgb2hsv');
-var rgb2hex = require('color-functions/lib/rgb2hex');
-var rgba2hex = require('color-functions/lib/rgba2hex');
+var cssColor = require('color-functions/dist/css-color');
+var rgbaColor = require('color-functions/dist/rgba');
+var rgb2hsv = require('color-functions/dist/rgb2hsv');
+var rgb2hex = require('color-functions/dist/rgb2hex');
+var rgba2hex = require('color-functions/dist/rgba2hex');
 
 var ColorPicker = require('./color-picker.js');
 
