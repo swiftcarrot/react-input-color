@@ -1,6 +1,6 @@
 {
   "name": "react-input-color",
-  "version": "1.7.3",
+  "version": "1.7.4",
   "description": "React input color component with hsv color picker",
   "main": "index.js",
   "scripts": {
