@@ -3,18 +3,18 @@ module.exports = {
   output: {
     path: __dirname + '/example',
     filename: 'bundle.js',
-    publicPath: "/example/",
+    publicPath: '/example/'
   },
   module: {
-    loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
-      {test: /\.css$/, loader: "style-loader!css-loader"},
-      {test: /\.less$/, loader: "style-loader!css-loader!less-loader"}
+    rules: [
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
+      { test: /\.less$/, loader: 'style-loader!css-loader!less-loader' }
     ]
   },
   externals: {
-    'react': 'React',
+    react: 'React',
     'react-dom': 'ReactDOM'
   },
-  devtool: "source-map"
+  devtool: 'source-map'
 };

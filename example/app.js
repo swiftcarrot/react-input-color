@@ -4,6 +4,7 @@ require('./app.less');
 var React = require('react');
 var ReactDOM = require('react-dom');
 var InputColor = require('../lib/input-color.js');
+var packageJSON = require('../package.json');
 
 var App = React.createClass({
   getInitialState() {
@@ -15,16 +16,25 @@ var App = React.createClass({
   render() {
     return (
       <div className="app">
-        <div className="target" style={{width:100,height:100,background:this.state.color}}></div>
+        <div>
+          {packageJSON.name}
+          <small>{packageJSON.version}</small>
+        </div>
+        <div
+          className="target"
+          style={{ width: 100, height: 100, background: this.state.color }}
+        />
         <span>{'color value: ' + this.state.color}</span>
-        <br/><br/>
+        <br />
+        <br />
         <input
           type="color"
           value={this.state.color}
           defaultValue="#345678"
           onChange={this._onColorChange}
         />
-        <br/><br/>
+        <br />
+        <br />
         <InputColor
           value={this.state.color}
           defaultValue="#345678"
@@ -47,4 +57,4 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(<App/>, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));

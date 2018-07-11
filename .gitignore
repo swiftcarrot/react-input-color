@@ -2,3 +2,4 @@ node_modules
 example/bundle*
 .publish
 coverage
+dist
