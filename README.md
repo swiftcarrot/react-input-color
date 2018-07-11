@@ -25,7 +25,7 @@ var InputColor = require('react-input-color');
 ```
 
 + The color property can be any valid css color value, check
-[color-functions](https://github.com/pqx/color-functions) for more details.
+[color-functions](https://github.com/wangzuo/color-functions) for more details.
 + This component is built with [react-input-slider](https://github.com/wangzuo/react-input-slider) and [react-input-number](https://github.com/wangzuo/react-input-number).
 
 ### License
