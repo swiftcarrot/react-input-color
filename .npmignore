@@ -7,3 +7,4 @@ webpack.config.js
 yarn.lock
 .babelrc
 Makefile
+.publish
