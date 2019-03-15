@@ -1,5 +1,11 @@
 # react-input-color
 
+[![npm](https://img.shields.io/npm/v/react-input-color.svg)](https://www.npmjs.com/package/react-input-color)
+[![npm](https://img.shields.io/npm/dm/react-input-color.svg)](https://www.npmjs.com/package/react-input-color)
+[![Build Status](https://travis-ci.org/wangzuo/react-input-color.svg?branch=master)](https://travis-ci.org/wangzuo/react-input-color)
+[![codecov](https://codecov.io/gh/wangzuo/react-input-color/branch/master/graph/badge.svg)](https://codecov.io/gh/wangzuo/react-input-color)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
 React input color component with hsv color picker
 
 The color picker is inspired by the [sketch](https://www.sketchapp.com/) color picker
