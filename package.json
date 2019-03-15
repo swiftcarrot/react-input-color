@@ -1,17 +1,14 @@
 {
   "name": "react-input-color",
-  "version": "1.7.5",
+  "version": "2.0.0-alpha.0",
   "description": "React input color component with hsv color picker",
-  "main": "index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "scripts": {
-    "start": "webpack-dev-server -c --port=8888",
-    "build": "make",
-    "deploy": "npm run build && github-pages-deploy",
-    "pretest": "npm run build",
-    "test": "jest"
-  },
-  "github-pages-deploy": {
-    "src": "example"
+    "build": "NODE_ENV=production rollup -c",
+    "test": "jest --coverage",
+    "prepublishOnly": "npm test && npm run build",
+    "watch": "rollup -cw"
   },
   "keywords": [
     "color",
@@ -24,46 +21,40 @@
   "author": "Wang Zuo",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-jest": "^23.4.0",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^1.0.0",
-    "github-pages-deploy": "0.0.3",
-    "jest": "^23.4.0",
-    "less": "^3.6.0",
-    "less-loader": "^4.1.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-test-renderer": "^15.6.1",
-    "style-loader": "^0.21.0",
-    "webpack": "^4.15.1",
-    "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.4"
+    "babel-jest": "^24.5.0",
+    "babel-preset-zkit": "^0.3.1",
+    "jest": "^24.5.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-test-renderer": "^16.8.4",
+    "rollup": "^1.6.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.1",
+    "rollup-plugin-node-resolve": "^4.0.1"
   },
   "dependencies": {
-    "blacklist": "^1.1.4",
-    "classnames": "^2.2.5",
-    "color-functions": "^1.2.0",
-    "object-assign": "^4.0.1",
-    "react-input-number": "^2.1.1",
-    "react-input-slider": "^4.0.1"
+    "@babel/runtime": "^7.3.4",
+    "@emotion/core": "^10.0.9",
+    "color-functions": "^3.0.0",
+    "react-input-number": "^5.0.4",
+    "react-input-slider": "^5.0.3"
   },
   "peerDependencies": {
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1"
-  },
-  "directories": {
-    "example": "example"
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wangzuo/react-input-color.git"
+    "url": "git+https://github.com/wangzuo/react-input-color.git"
   },
   "bugs": {
     "url": "https://github.com/wangzuo/react-input-color/issues"
   },
-  "homepage": "https://github.com/wangzuo/react-input-color"
+  "homepage": "https://code.swiftcarrot.com/react-input-color",
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
+  }
 }
