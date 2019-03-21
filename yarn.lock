@@ -1248,10 +1248,10 @@ babel-preset-jest@^24.3.0:
     "@babel/plugin-syntax-object-rest-spread" "^7.0.0"
     babel-plugin-jest-hoist "^24.3.0"
 
-babel-preset-zkit@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/babel-preset-zkit/-/babel-preset-zkit-0.3.1.tgz#18d21a395fb10a8b983c87d79cce36eb21213dd5"
-  integrity sha512-KECIXI2ec1JtWmCNMe3eEi8rBaeytjqwSe4Aui085FvXf8/THfkrXzcvc+RbMar3nkQ4TLKxn0RDuhg6j/3s6w==
+babel-preset-zkit@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/babel-preset-zkit/-/babel-preset-zkit-0.4.0.tgz#e8f60c1a265c22f0fb85a1feaa4dfcbc1a081143"
+  integrity sha512-2YZSNyj5MImQIqsdXeWfRM25e1z80nYQ6NgezesA3vGc/DRMmR3mfk2DOyuxbSVgoSse3YkT3o5PAyISZQqqAQ==
   dependencies:
     "@babel/core" "^7.3.4"
     "@babel/plugin-proposal-class-properties" "^7.3.4"
@@ -3513,19 +3513,19 @@ react-dom@^16.8.4:
     prop-types "^15.6.2"
     scheduler "^0.13.4"
 
-react-input-number@^5.0.4:
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/react-input-number/-/react-input-number-5.0.4.tgz#8e04f78135070a6460668a16d9144c9189466c2c"
-  integrity sha512-GJ1TGK7rT65dr8maYqJBmVsOCEZO6MaVG2qihciNus8lGkXNGUCFxMpx5rs1RE13H9LQZADlkjoNI02WnbF+Fw==
+react-input-number@^5.0.5:
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/react-input-number/-/react-input-number-5.0.5.tgz#e7cedc5c12785a23ae939078048fd7fadd96a7ea"
+  integrity sha512-Ovx+xPHAkiYzpAfbzAQisfJafeIUKRFO0Tgh60AptD5JLScgG/LoV8wtY9FdSvjIfMvgHpL5hTAd6d2xY641qA==
   dependencies:
     "@babel/runtime" "^7.3.4"
     "@emotion/core" "^10.0.9"
     lodash "^4.17.11"
 
-react-input-slider@^5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/react-input-slider/-/react-input-slider-5.0.3.tgz#ffd2bfbb45704cf0d3b12b94d55d684898b2dc21"
-  integrity sha512-JLAzWtVLhMGDufLe+WAqB3k7NU8H9z6wxWEeMisi/osZF/nPy6YPIYxZ4F3aaWuqpysJuRI62lb6J2sdH0EDuA==
+react-input-slider@^5.0.5:
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/react-input-slider/-/react-input-slider-5.0.5.tgz#2a7015ce22297c1091af146d90fa9bde40f49030"
+  integrity sha512-pxpxZOGbyjeLZBtg8WLisJwplappGaX4lEDPkz/vOFaRquacxmutDZHPhLEe34D5cAC5gunKs3QMQlR+YxWkiA==
   dependencies:
     "@babel/runtime" "^7.1.5"
     "@emotion/core" "^10.0.9"

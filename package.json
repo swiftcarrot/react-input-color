@@ -1,6 +1,6 @@
 {
   "name": "react-input-color",
-  "version": "2.0.0-alpha.0",
+  "version": "2.0.0-alpha.2",
   "description": "React input color component with hsv color picker",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -22,7 +22,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-jest": "^24.5.0",
-    "babel-preset-zkit": "^0.3.1",
+    "babel-preset-zkit": "^0.4.0",
     "jest": "^24.5.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
@@ -36,8 +36,8 @@
     "@babel/runtime": "^7.3.4",
     "@emotion/core": "^10.0.9",
     "color-functions": "^3.0.0",
-    "react-input-number": "^5.0.4",
-    "react-input-slider": "^5.0.3"
+    "react-input-number": "^5.0.5",
+    "react-input-slider": "^5.0.5"
   },
   "peerDependencies": {
     "react": "^16.8.4",
