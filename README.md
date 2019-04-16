@@ -12,6 +12,8 @@ The color picker is inspired by the [sketch](https://www.sketchapp.com/) color p
 
 ![screenshot](https://raw.githubusercontent.com/wangzuo/react-input-color/master/screenshot.png)
 
+Starting from v2, this component is rewritten with [emotion](https://emotion.sh/) and it doesnot require any external css file.
+
 ### Installation
 
 ```sh
@@ -25,18 +27,20 @@ yarn add react-input-color
 
 ### Usage
 
-Check [app.js](https://github.com/wangzuo/react-input-color/blob/master/example/app.js) for a working example.
-
 ```javascript
 import React from 'react';
-import { ColorPicker } from 'react-input-color';
+import InputColor from 'react-input-color';
 
 function App() {
   const [color, setColor] = React.useState({});
 
   return (
     <div>
-      <ColorPicker initialHexColor="#5e72e4" onChange={setColor} />
+      <InputColor
+        initialHexColor="#5e72e4"
+        onChange={setColor}
+        placement="right"
+      />
       <div
         style={{
           width: 50,

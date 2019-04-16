@@ -1,19 +1,11 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import { useState, useEffect } from 'react';
-import { hex2rgb, rgb2hsv } from 'color-functions';
+import Popover from '@xkit/popover';
 import ColorPicker from './color-picker';
+import { parseColor } from './utils';
 
-export function parseColor(hexColor) {
-  const rgb = hex2rgb(hexColor);
-  const { r, g, b } = rgb;
-  const hsv = rgb2hsv(r, g, b);
-
-  return { ...hsv, r, g, b, a: 100, hex: hexColor };
-}
-
-const InputColor = ({ initialHexColor, onChange, ...props }) => {
-  const [open, setOpen] = useState(false);
+const InputColor = ({ initialHexColor, onChange, placement, ...props }) => {
   const [color, setColor] = useState(parseColor(initialHexColor));
 
   useEffect(() => {
@@ -27,68 +19,41 @@ const InputColor = ({ initialHexColor, onChange, ...props }) => {
     }
   }
 
-  function handleClick() {
-    setOpen(open => !open);
-  }
-
-  function handleCancel() {
-    setOpen(false);
-  }
-
   return (
-    <span
-      {...props}
-      css={css`
-        position: relative;
-        display: inline-block;
-        width: 49px;
-        height: 24px;
-        padding: 4px;
-        padding-right: 15px;
-        background-color: #ffffff;
-        border: 1px solid #bebebe;
-        border-radius: 3px;
-        user-select: none;
-      `}
+    <Popover
+      placement={placement}
+      body={<ColorPicker color={color} onChange={changeColor} />}
     >
       <span
+        {...props}
         css={css`
-          display: block;
-          width: 100%;
-          height: 100%;
-          cursor: pointer;
+          position: relative;
+          display: inline-block;
+          width: 49px;
+          height: 24px;
+          padding: 4px;
+          background-color: #ffffff;
+          border: 1px solid #bebebe;
+          border-radius: 3px;
+          user-select: none;
         `}
-        style={{ backgroundColor: color.hex }}
-        onClick={handleClick}
-      />
-      <span
-        css={css`
-          position: absolute;
-          display: block;
-          top: 0;
-          right: 3px;
-          cursor: pointer;
-          color: #333;
-        `}
-        onClick={handleCancel}
       >
-        &times;
-      </span>
-      {open ? (
-        <div
+        <span
           css={css`
-            position: absolute;
-            padding: 10px;
-            background-color: #f5f5f5;
-            z-index: 9999;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            display: block;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
           `}
-        >
-          <ColorPicker color={color} onChange={changeColor} />
-        </div>
-      ) : null}
-    </span>
+          style={{ backgroundColor: color.hex }}
+        />
+      </span>
+    </Popover>
   );
+};
+
+InputColor.defaultProps = {
+  placement: 'bottom'
 };
 
 export default InputColor;
