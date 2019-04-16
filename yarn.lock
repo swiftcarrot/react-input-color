@@ -988,10 +988,10 @@
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-12.0.9.tgz#693e76a52f61a2f1e7fb48c0eef167b95ea4ffd0"
   integrity sha512-sCZy4SxP9rN2w30Hlmg5dtdRwgYQfYRiLo9usw8X9cxlf+H4FqM1xX7+sNH7NNKVdbXMJWqva7iyy+fxh/V7fA==
 
-"@xkit/popover@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@xkit/popover/-/popover-0.1.3.tgz#667b1a551519050886c8fdfcd7cf52d7ac8023c2"
-  integrity sha512-n5l4P4z51R9q0PqoUATOr4h3pxnoPzQJ/obqzaMSV4VlFu4JPEb6AB/ibHyIim4oaFOpmtvvgm+3SIGtd29gsQ==
+"@xkit/popover@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@xkit/popover/-/popover-0.1.4.tgz#42291a6ec002b3dd4a6029ca26567d5ed1caf132"
+  integrity sha512-C+18ogn0dQsVvZGVxeXO8kcbwLzHg/hdolxrx4rpNSYgNu4A+NVUxRFI8VETHf9jq795cU2Dsuf1gEEvvHHjgQ==
   dependencies:
     "@babel/runtime" "^7.3.4"
     "@emotion/core" "^10.0.9"
