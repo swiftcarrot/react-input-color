@@ -29,6 +29,7 @@ const InputColor = ({ initialHexColor, onChange, placement, ...props }) => {
         css={css`
           position: relative;
           display: inline-block;
+          box-sizing: border-box;
           width: 49px;
           height: 24px;
           padding: 4px;
