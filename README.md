@@ -23,7 +23,7 @@ yarn add react-input-color
 
 ### Demo
 
-[https://code.swiftcarrot.com/react-input-color](https://code.swiftcarrot.com/react-input-color)
+[https://swiftcarrot.dev/react-input-color](https://swiftcarrot.dev/react-input-color)
 
 ### Usage
 

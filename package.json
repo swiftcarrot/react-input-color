@@ -1,6 +1,6 @@
 {
   "name": "react-input-color",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "React input color component with hsv color picker",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -43,8 +43,8 @@
     "@emotion/core": "^10.0.9",
     "@xkit/popover": "^0.1.6",
     "color-functions": "^3.0.0",
-    "react-input-number": "^5.0.6",
-    "react-input-slider": "^5.0.8"
+    "react-input-number": "^5.0.7",
+    "react-input-slider": "^5.0.9"
   },
   "peerDependencies": {
     "react": "^16.8.4",
@@ -57,7 +57,7 @@
   "bugs": {
     "url": "https://github.com/wangzuo/react-input-color/issues"
   },
-  "homepage": "https://code.swiftcarrot.com/react-input-color",
+  "homepage": "https://swiftcarrot.dev/react-input-color",
   "jest": {
     "collectCoverage": true,
     "collectCoverageFrom": [
