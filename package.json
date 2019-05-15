@@ -1,6 +1,6 @@
 {
   "name": "react-input-color",
-  "version": "2.0.6",
+  "version": "2.0.9",
   "description": "React input color component with hsv color picker",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -27,24 +27,24 @@
   "author": "Wang Zuo",
   "license": "MIT",
   "devDependencies": {
-    "babel-jest": "^24.5.0",
-    "babel-preset-zkit": "^0.4.0",
-    "jest": "^24.5.0",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-test-renderer": "^16.8.4",
-    "rollup": "^1.6.0",
+    "babel-jest": "^24.8.0",
+    "babel-preset-swiftcarrot": "^0.6.1",
+    "jest": "^24.8.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6",
+    "rollup": "^1.11.3",
     "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-commonjs": "^9.2.1",
-    "rollup-plugin-node-resolve": "^4.0.1"
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-node-resolve": "^4.2.3"
   },
   "dependencies": {
-    "@babel/runtime": "^7.3.4",
-    "@emotion/core": "^10.0.9",
-    "@xkit/popover": "^0.1.6",
-    "color-functions": "^3.0.0",
-    "react-input-number": "^5.0.7",
-    "react-input-slider": "^5.0.9"
+    "@babel/runtime": "^7.4.4",
+    "@emotion/core": "^10.0.10",
+    "@xkit/popover": "^0.1.9",
+    "color-functions": "^3.0.1",
+    "react-input-number": "^5.0.10",
+    "react-input-slider": "^5.0.12"
   },
   "peerDependencies": {
     "react": "^16.8.4",
