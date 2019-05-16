@@ -1164,21 +1164,21 @@
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-12.0.9.tgz#693e76a52f61a2f1e7fb48c0eef167b95ea4ffd0"
   integrity sha512-sCZy4SxP9rN2w30Hlmg5dtdRwgYQfYRiLo9usw8X9cxlf+H4FqM1xX7+sNH7NNKVdbXMJWqva7iyy+fxh/V7fA==
 
-"@xkit/popover@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@xkit/popover/-/popover-0.1.9.tgz#4eab8abf1ea97d111c230d4e986509cb0040bd54"
-  integrity sha512-z9Hq729vhb+AuYmiUtGd31fFelBj8w6JvWMHiNjva0YSLY0NA4snZvgiSRmWnH7Yq3Qiqi1x9vwv3HPajcIgCw==
+"@xkit/popover@^0.1.10":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@xkit/popover/-/popover-0.1.10.tgz#70eb98e5a7aae78922df9c059cfed6ea6c0ea992"
+  integrity sha512-RvjIqZdqEWqFaEhckXj7Qk8KJExKXyswS/0t+hBWX6OCgLfZ9FUWpsq0p3WkvIY9xORX5uFVgohsXV1mgKm+HA==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@emotion/core" "^10.0.10"
-    "@xkit/spinner" "^0.2.2"
+    "@xkit/spinner" "^0.2.3"
     popper.js "^1.15.0"
     use-onclickoutside "^0.3.1"
 
-"@xkit/spinner@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@xkit/spinner/-/spinner-0.2.2.tgz#7bd4244f21a936f2c705f7f1d5749b350c170896"
-  integrity sha512-qnSez1me2BjGNrG+7vo/NgtgK9XpB1c8ElGDKNkVOSTq3QoJGCwcxw/+nrWkYvEh31XQv1IDW2mpE8sXRkWLVQ==
+"@xkit/spinner@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@xkit/spinner/-/spinner-0.2.3.tgz#63f6579838e1045269846a92c465b508d1da9d7a"
+  integrity sha512-nwTOpnCVTw1Oh1b0AIx7RmXHg+WJLpm6/4g3Avgma8JIueqCQ4f7VuFhFJYzPD7X/L2YeunJji1iX21TP9jsMw==
 
 abab@^2.0.0:
   version "2.0.0"
@@ -3879,10 +3879,10 @@ react-dom@^16.8.6:
     prop-types "^15.6.2"
     scheduler "^0.13.6"
 
-react-input-number@^5.0.13:
-  version "5.0.13"
-  resolved "https://registry.yarnpkg.com/react-input-number/-/react-input-number-5.0.13.tgz#82ae5ae783106349db290ee271c88f5c5b053555"
-  integrity sha512-pgkjgr2KjQCZWU5vzokH0ckrDa88gk9Ek6ZbcLrRVTeixs09VvV/8BQro6Updzynzl+PWTFXZgKSSm926mnGuw==
+react-input-number@^5.0.14:
+  version "5.0.14"
+  resolved "https://registry.yarnpkg.com/react-input-number/-/react-input-number-5.0.14.tgz#6fa8026b74aeba6901b9e6437f5a5b29c2e077c0"
+  integrity sha512-rPurA3IN+UnGT5QtwkPURly0FGqJFKUIGtvXq2aRikWsG4ppqctuIVOL3JXU2zRV68izodkajuZZ0cjjiPZ/9Q==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@emotion/core" "^10.0.10"
