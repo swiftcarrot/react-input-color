@@ -1456,10 +1456,10 @@ babel-preset-jest@^24.6.0:
     "@babel/plugin-syntax-object-rest-spread" "^7.0.0"
     babel-plugin-jest-hoist "^24.6.0"
 
-babel-preset-swiftcarrot@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/babel-preset-swiftcarrot/-/babel-preset-swiftcarrot-0.6.1.tgz#e4c8a5341e6133371a0e354fccfa31618fe06e0d"
-  integrity sha512-4N18TtATFAxvDOjfNXk6Iee9u9yXzCM86AD8hzdt6hI8N3P0mKp2ZjdSqPg5QesTtqBzke2m66OIUqXQRP6FzA==
+babel-preset-swiftcarrot@^0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/babel-preset-swiftcarrot/-/babel-preset-swiftcarrot-0.6.2.tgz#d4479222a5f12ea4624657efe157f30413f2067e"
+  integrity sha512-qlK8c2a0Cey6CXOrSbXSDg7WaqySGle8NNy/EBq2PMIavVtoF+K8TTG5rNIbcl5gRqzv8i1fsTo0pW4JJ1ddVw==
   dependencies:
     "@babel/core" "^7.4.4"
     "@babel/plugin-proposal-class-properties" "^7.4.4"
@@ -3879,19 +3879,19 @@ react-dom@^16.8.6:
     prop-types "^15.6.2"
     scheduler "^0.13.6"
 
-react-input-number@^5.0.10:
-  version "5.0.10"
-  resolved "https://registry.yarnpkg.com/react-input-number/-/react-input-number-5.0.10.tgz#1907cc0a4a2630b17342242ccd9fba035fb8ca3a"
-  integrity sha512-Qhs6s7RZS4vitEneJU8kYFfKoysO81qy2d1S0FIFuKQMiuU0iiAyXtwOn/fnctUjBQvQn2BYvunlLwvyWHvi2A==
+react-input-number@^5.0.12:
+  version "5.0.12"
+  resolved "https://registry.yarnpkg.com/react-input-number/-/react-input-number-5.0.12.tgz#9a5d9b1a0d26e7fe2bb1e85de9a3a8f8b66221e8"
+  integrity sha512-nKNa8GhQezz6c8tDZluH96PdZYN/cSrvCrCljyoMcPvrK/HuqBVpLoydVxPnBD2afHXayrj/vzLzwGsjcbh2ug==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@emotion/core" "^10.0.10"
     lodash "^4.17.11"
 
-react-input-slider@^5.0.12:
-  version "5.0.12"
-  resolved "https://registry.yarnpkg.com/react-input-slider/-/react-input-slider-5.0.12.tgz#5464865bf0448fbb95c7120c40f7cad34151350f"
-  integrity sha512-pGr8IK1Rz3cDYd4Gnrelrnq6tMSgyTpdhq3lrNjbIuCTiqP0zu3o30g2CKMFDUOapVX7VIBBZyaFkMbYtehaMA==
+react-input-slider@^5.0.13:
+  version "5.0.13"
+  resolved "https://registry.yarnpkg.com/react-input-slider/-/react-input-slider-5.0.13.tgz#dca680719b3dd0b738107c0a89b039d98e5a0510"
+  integrity sha512-SMFdgUMp/dNFOlBLW2roImdufp+bM5JzQRVIhrcuFo2WwUsJBrERKQOmTKABejxpcGptVcNt63yMu5duV3M3og==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@emotion/core" "^10.0.10"
