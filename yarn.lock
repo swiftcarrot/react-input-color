@@ -3879,19 +3879,19 @@ react-dom@^16.8.6:
     prop-types "^15.6.2"
     scheduler "^0.13.6"
 
-react-input-number@^5.0.12:
-  version "5.0.12"
-  resolved "https://registry.yarnpkg.com/react-input-number/-/react-input-number-5.0.12.tgz#9a5d9b1a0d26e7fe2bb1e85de9a3a8f8b66221e8"
-  integrity sha512-nKNa8GhQezz6c8tDZluH96PdZYN/cSrvCrCljyoMcPvrK/HuqBVpLoydVxPnBD2afHXayrj/vzLzwGsjcbh2ug==
+react-input-number@^5.0.13:
+  version "5.0.13"
+  resolved "https://registry.yarnpkg.com/react-input-number/-/react-input-number-5.0.13.tgz#82ae5ae783106349db290ee271c88f5c5b053555"
+  integrity sha512-pgkjgr2KjQCZWU5vzokH0ckrDa88gk9Ek6ZbcLrRVTeixs09VvV/8BQro6Updzynzl+PWTFXZgKSSm926mnGuw==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@emotion/core" "^10.0.10"
     lodash "^4.17.11"
 
-react-input-slider@^5.0.13:
-  version "5.0.13"
-  resolved "https://registry.yarnpkg.com/react-input-slider/-/react-input-slider-5.0.13.tgz#dca680719b3dd0b738107c0a89b039d98e5a0510"
-  integrity sha512-SMFdgUMp/dNFOlBLW2roImdufp+bM5JzQRVIhrcuFo2WwUsJBrERKQOmTKABejxpcGptVcNt63yMu5duV3M3og==
+react-input-slider@^5.0.14:
+  version "5.0.14"
+  resolved "https://registry.yarnpkg.com/react-input-slider/-/react-input-slider-5.0.14.tgz#a06bf6568a731a252210b9e6977e5da792ea6c55"
+  integrity sha512-3aNBheL34IlIjH1nlGltbmIODAN76prGmxa4YjUdEf4mKeo1DQ2B2xuIsc1O6rSgSYE+5b0upOr1UCsTJoBXXg==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@emotion/core" "^10.0.10"

@@ -2,15 +2,15 @@
 
 [![npm](https://img.shields.io/npm/v/react-input-color.svg)](https://www.npmjs.com/package/react-input-color)
 [![npm](https://img.shields.io/npm/dm/react-input-color.svg)](https://www.npmjs.com/package/react-input-color)
-[![Build Status](https://travis-ci.org/wangzuo/react-input-color.svg?branch=master)](https://travis-ci.org/wangzuo/react-input-color)
-[![codecov](https://codecov.io/gh/wangzuo/react-input-color/branch/master/graph/badge.svg)](https://codecov.io/gh/wangzuo/react-input-color)
+[![Build Status](https://travis-ci.org/swiftcarrot/react-input-color.svg?branch=master)](https://travis-ci.org/swiftcarrot/react-input-color)
+[![codecov](https://codecov.io/gh/swiftcarrot/react-input-color/branch/master/graph/badge.svg)](https://codecov.io/gh/swiftcarrot/react-input-color)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 React input color component with hsv color picker
 
 The color picker is inspired by the [sketch](https://www.sketchapp.com/) color picker
 
-![screenshot](https://raw.githubusercontent.com/wangzuo/react-input-color/master/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/swiftcarrot/react-input-color/master/screenshot.png)
 
 Starting from v2, this component is rewritten with [emotion](https://emotion.sh/) and it doesnot require any external css file.
 
@@ -54,7 +54,7 @@ function App() {
 }
 ```
 
-- This component is built with [react-input-slider](https://github.com/wangzuo/react-input-slider) and [react-input-number](https://github.com/wangzuo/react-input-number).
+- This component is built with [react-input-slider](https://github.com/swiftcarrot/react-input-slider) and [react-input-number](https://github.com/swiftcarrot/react-input-number).
 
 ### License
 
