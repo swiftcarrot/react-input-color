@@ -1,4 +1,4 @@
-import { hex2rgb, rgb2hsv } from 'color-functions';
+import { hex2rgb, rgb2hsv } from '@swiftcarrot/color-fns';
 
 export function parseColor(hexColor) {
   const rgb = hex2rgb(hexColor);
@@ -15,4 +15,4 @@ export {
   hex2rgb,
   rgba,
   hsv2rgb
-} from 'color-functions';
+} from '@swiftcarrot/color-fns';

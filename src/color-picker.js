@@ -9,7 +9,7 @@ import {
   hex2rgb,
   rgba,
   hsv2rgb
-} from 'color-functions';
+} from '@swiftcarrot/color-fns';
 
 const KEY_ENTER = 13;
 
