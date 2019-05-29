@@ -3785,10 +3785,10 @@ react-dom@^16.8.6:
     prop-types "^15.6.2"
     scheduler "^0.13.6"
 
-react-input-number@^5.0.16:
-  version "5.0.16"
-  resolved "https://registry.yarnpkg.com/react-input-number/-/react-input-number-5.0.16.tgz#9eb1b695caabb63993f1be928bb8432b417c531a"
-  integrity sha512-dptXYk+wsKNv2LRlFyBTN/QAeE69FqndOgRRJ0h2jqafFNwDAieIUOMASMfI6NN3snjdQwJwDVs4voMlGmBDqw==
+react-input-number@^5.0.17:
+  version "5.0.17"
+  resolved "https://registry.yarnpkg.com/react-input-number/-/react-input-number-5.0.17.tgz#fd31137f4416e3168c5fe04eae4efa9f67aecc59"
+  integrity sha512-hLlWRuEntIxXEpT3XLLP7JEixD/W/zYUX2F97nYmY4Q9JhB7sMRZNzj6PNIXsrkCWt3BW7ooUwKslTkx28Oqvg==
   dependencies:
     "@babel/runtime" "^7.4.5"
     "@emotion/core" "^10.0.10"
