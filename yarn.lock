@@ -1110,10 +1110,10 @@
   resolved "https://registry.yarnpkg.com/@swiftcarrot/color-fns/-/color-fns-3.0.4.tgz#96e1cad6259192526eaf54c8beb9df3e42729442"
   integrity sha512-ew8HCpPPDqvMIRiwLr+2qzdxHdnvHJzLi9t/MxKRoUGru7MO71KX4WR9YMRaJ9pu7YCvnofhfzUydtbVXQHOew==
 
-"@swiftcarrot/utils@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@swiftcarrot/utils/-/utils-0.2.0.tgz#8d85951f32527a27ea065c7967f6e952760ec641"
-  integrity sha512-a20RzhfMeFT7swz7hjdOtRatKAQpuKGgM0T3uJslZNYBKV6jGKAf7b6WpaRsfH6WIdoOqtW2nBADd5/1Ub80zQ==
+"@swiftcarrot/utils@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@swiftcarrot/utils/-/utils-0.2.1.tgz#46a174a30603cb26a6d49ba67b6f89375642dd23"
+  integrity sha512-ihfCnWnDZaIbXEALixDZmnenmJYJhAim017EwgI05er9kEsrcqCF/KeBfEXAbZwI7ZtJZj8AxqNIo42JZe2szQ==
   dependencies:
     "@babel/runtime" "^7.5.5"
     lodash "^4.17.15"
@@ -1204,14 +1204,14 @@
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-12.0.9.tgz#693e76a52f61a2f1e7fb48c0eef167b95ea4ffd0"
   integrity sha512-sCZy4SxP9rN2w30Hlmg5dtdRwgYQfYRiLo9usw8X9cxlf+H4FqM1xX7+sNH7NNKVdbXMJWqva7iyy+fxh/V7fA==
 
-"@xkit/popover@^0.1.15":
-  version "0.1.15"
-  resolved "https://registry.yarnpkg.com/@xkit/popover/-/popover-0.1.15.tgz#487e8bc83b376871b5d703f8cec83f074c7017e2"
-  integrity sha512-hKaysE7Ay3WMWcCaJGZ3lSgDn/Hs8WxujgVtcHko0aV3bHnqd3YV5D7zQDFkKjEEXgKIj70kfrKYudrEGtytrg==
+"@xkit/popover@^0.1.16":
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/@xkit/popover/-/popover-0.1.16.tgz#83fe46277e2630ca6a4136bfa3a07271634bb2e5"
+  integrity sha512-VTfBWKKTrXMp8njcAem6t9ikbxXDWBKx0IC2M9T0NkPPC6JNPsXjaNj/5YbKpNciBNkLnxWmizfdS5y2FW2HTQ==
   dependencies:
     "@babel/runtime" "^7.5.5"
     "@emotion/core" "^10.0.14"
-    "@swiftcarrot/utils" "^0.2.0"
+    "@swiftcarrot/utils" "^0.2.1"
     "@xkit/spinner" "^0.2.3"
     popper.js "^1.15.0"
     use-onclickoutside "^0.3.1"
@@ -3891,10 +3891,10 @@ react-input-number@^5.0.18:
     "@emotion/core" "^10.0.14"
     lodash "^4.17.15"
 
-react-input-slider@^5.0.16:
-  version "5.0.16"
-  resolved "https://registry.yarnpkg.com/react-input-slider/-/react-input-slider-5.0.16.tgz#c6feec0c1b123a482663512b7397ac539f5610d7"
-  integrity sha512-xiAnDD0n142VO1iz160OS/alvEAe06TqAkAjxd1ekog13oFSJBXg/6kCFBN05BnyVT5diutU3S29wYU9i0vdCw==
+react-input-slider@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-input-slider/-/react-input-slider-5.1.0.tgz#f8cbf6d329e3bb80f2f3430558c99bd545623e85"
+  integrity sha512-LAXYMJdp7WBPQVxyLxtPSFGE66IinZKRH/nZTRHYDfL4VAHFM6cMQrtw7YZlp6DRiNI9/3C1RUsRm5B/mOS3YQ==
   dependencies:
     "@babel/runtime" "^7.5.5"
     "@emotion/core" "^10.0.14"
