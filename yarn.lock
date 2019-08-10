@@ -3891,10 +3891,10 @@ react-input-number@^5.0.18:
     "@emotion/core" "^10.0.14"
     lodash "^4.17.15"
 
-react-input-slider@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/react-input-slider/-/react-input-slider-5.1.0.tgz#f8cbf6d329e3bb80f2f3430558c99bd545623e85"
-  integrity sha512-LAXYMJdp7WBPQVxyLxtPSFGE66IinZKRH/nZTRHYDfL4VAHFM6cMQrtw7YZlp6DRiNI9/3C1RUsRm5B/mOS3YQ==
+react-input-slider@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/react-input-slider/-/react-input-slider-5.1.1.tgz#1d9c8aca099edb82c2a603975a78744309e038c7"
+  integrity sha512-TalvvZGPXj3qeX8ZQm0myCiE+AWWq0oA2n8MMki7sHIFlkGlgVmEGyeZ+kM7tq2woYfq+6YtOTWQI4OHDUROhg==
   dependencies:
     "@babel/runtime" "^7.5.5"
     "@emotion/core" "^10.0.14"
