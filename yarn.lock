@@ -1195,22 +1195,16 @@
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-12.0.9.tgz#693e76a52f61a2f1e7fb48c0eef167b95ea4ffd0"
   integrity sha512-sCZy4SxP9rN2w30Hlmg5dtdRwgYQfYRiLo9usw8X9cxlf+H4FqM1xX7+sNH7NNKVdbXMJWqva7iyy+fxh/V7fA==
 
-"@xkit/popover@^0.1.18":
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/@xkit/popover/-/popover-0.1.18.tgz#844da41351658e670e9e7afb8dcb5c07135a8223"
-  integrity sha512-f0Tsz2lMByfuRUzTgyMOvLbOQaaZpgRt6ki22D+dzG4e0zAfDLEDv+/75J608MposfjoLmVxwFfGZglzcPCjXA==
+"@xkit/popover@^0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@xkit/popover/-/popover-0.1.19.tgz#ca8c9c44b4a9bd2f97e62b1d1249e0162212669b"
+  integrity sha512-QEAHB6MBWepmRTJn0YOdi1FYjESJzTE/T14bE15dXLid+6u2taqhjhONTbW7/pUnfdel8W7aZeYtWJrOyjz3ew==
   dependencies:
     "@babel/runtime" "^7.5.5"
     "@emotion/core" "^10.0.14"
-    "@xkit/spinner" "^0.2.3"
     frontend-fns "^0.2.3"
     popper.js "^1.15.0"
     use-onclickoutside "^0.3.1"
-
-"@xkit/spinner@^0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@xkit/spinner/-/spinner-0.2.3.tgz#63f6579838e1045269846a92c465b508d1da9d7a"
-  integrity sha512-nwTOpnCVTw1Oh1b0AIx7RmXHg+WJLpm6/4g3Avgma8JIueqCQ4f7VuFhFJYzPD7X/L2YeunJji1iX21TP9jsMw==
 
 abab@^2.0.0:
   version "2.0.0"
