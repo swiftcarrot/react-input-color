@@ -17,4 +17,4 @@ export interface InputColorProps {
   onChange?(color: Color): void;
 }
 
-export default class InputColor extends Component<InputColorProps, void> {}
+export default function InputColor(props: InputColorProps)
