@@ -1195,14 +1195,14 @@
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-12.0.9.tgz#693e76a52f61a2f1e7fb48c0eef167b95ea4ffd0"
   integrity sha512-sCZy4SxP9rN2w30Hlmg5dtdRwgYQfYRiLo9usw8X9cxlf+H4FqM1xX7+sNH7NNKVdbXMJWqva7iyy+fxh/V7fA==
 
-"@xkit/popover@^0.1.19":
-  version "0.1.19"
-  resolved "https://registry.yarnpkg.com/@xkit/popover/-/popover-0.1.19.tgz#ca8c9c44b4a9bd2f97e62b1d1249e0162212669b"
-  integrity sha512-QEAHB6MBWepmRTJn0YOdi1FYjESJzTE/T14bE15dXLid+6u2taqhjhONTbW7/pUnfdel8W7aZeYtWJrOyjz3ew==
+"@xkit/popover@^0.1.20":
+  version "0.1.20"
+  resolved "https://registry.yarnpkg.com/@xkit/popover/-/popover-0.1.20.tgz#8c0b15c66f75f398efaca9e133a71ff7a4f1cdf4"
+  integrity sha512-SKMKmQuN7Kj4IfyDSzGSU+Je2rwb4nCB5VihDXY9TEzoRgKlbQksjKECBOijdSdWzw2BZCQ2JKgGrmB1oO1YOw==
   dependencies:
     "@babel/runtime" "^7.5.5"
     "@emotion/core" "^10.0.14"
-    frontend-fns "^0.2.3"
+    frontend-fns "^0.2.4"
     popper.js "^1.15.0"
     use-onclickoutside "^0.3.1"
 
@@ -2193,10 +2193,10 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-frontend-fns@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/frontend-fns/-/frontend-fns-0.2.3.tgz#7a8ac63d18e672c1eb8ac78b64d6dfcd76a6255a"
-  integrity sha512-PSZwEIxljol/qKOgf43j05BzO5exX94MWuDRaPAxU2N2gKKp6keJukmGFbGLfZEXOilwmxzEiD/1GfVoiaev4A==
+frontend-fns@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/frontend-fns/-/frontend-fns-0.2.4.tgz#adf3eb29a834c5e0516b9df0fb5f207fa2d0c3ad"
+  integrity sha512-7a+OA5aqG+mMJl38/BtnUi0mylVWQO/YS5pbgLStFUS7CFg+gB21wh4/lGKvBoO9xKoCfAIGF2sZ4NK4JRBcUg==
   dependencies:
     "@babel/runtime" "^7.5.5"
     lodash "^4.17.15"
