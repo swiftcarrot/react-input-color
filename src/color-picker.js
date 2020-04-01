@@ -5,7 +5,7 @@ import InputNumber from 'react-input-number';
 import {
   rgb2hsv,
   hsv2hex,
-  rgba2hex,
+  rgb2hex,
   hex2rgb,
   rgba,
   hsv2rgb
@@ -18,25 +18,24 @@ const ColorPicker = ({ color, onChange }) => {
 
   function changeColor(color) {
     if (onChange) {
-      onChange(color);
+      onChange({ ...color, rgba: rgba(color.r, color.g, color.b, color.a) });
     }
   }
 
   function changeHSV(h, s, v) {
     const { r, g, b } = hsv2rgb(h, s, v);
-    const hex = rgba2hex(r, g, b, a);
+    const hex = rgb2hex(r, g, b);
     changeColor({ ...color, h, s, v, r, g, b, hex });
   }
 
   function changeRGB(r, g, b) {
-    const hex = rgba2hex(r, g, b, a);
+    const hex = rgb2hex(r, g, b);
     const { h, s, v } = rgb2hsv(r, g, b);
     changeColor({ ...color, r, g, b, h, s, v, hex });
   }
 
   function changeAlpha(a) {
-    const hex = rgba2hex(r, g, b, a);
-    changeColor({ ...color, a, hex });
+    changeColor({ ...color, a });
   }
 
   function changeHex(hex) {
@@ -190,7 +189,12 @@ const ColorPicker = ({ color, onChange }) => {
         </div>
 
         <div css={styles.input}>
-          <InputNumber value={a} onChange={a => changeAlpha(a)} />
+          <InputNumber
+            min={0}
+            max={100}
+            value={a}
+            onChange={a => changeAlpha(a)}
+          />
           <div>A</div>
         </div>
       </div>
@@ -199,7 +203,7 @@ const ColorPicker = ({ color, onChange }) => {
 };
 
 ColorPicker.defaultProps = {
-  initialHexColor: '#5e72e4'
+  initialValue: '#5e72e4'
 };
 
 const styles = {

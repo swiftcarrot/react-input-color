@@ -10,7 +10,9 @@
     "build": "rm -rf dist && NODE_ENV=production rollup -c",
     "test": "jest --coverage",
     "prepublishOnly": "npm test && npm run build",
-    "watch": "rollup -cw"
+    "watch": "rollup -cw",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "files": [
     "index.d.ts",
@@ -30,7 +32,12 @@
     "@babel/core": "^7.9.0",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
     "babel-jest": "^25.2.4",
+    "babel-loader": "^8.1.0",
     "babel-preset-swiftcarrot": "^1.1.0",
     "jest": "^25.2.4",
     "react": "^16.8.6",

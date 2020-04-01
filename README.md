@@ -37,7 +37,7 @@ function App() {
   return (
     <div>
       <InputColor
-        initialHexColor="#5e72e4"
+        initialValue="#5e72e4"
         onChange={setColor}
         placement="right"
       />

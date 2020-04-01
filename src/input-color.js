@@ -5,12 +5,12 @@ import Popover from '@xkit/popover';
 import ColorPicker from './color-picker';
 import { parseColor } from './utils';
 
-const InputColor = ({ initialHexColor, onChange, placement, ...props }) => {
-  const [color, setColor] = useState(parseColor(initialHexColor));
+const InputColor = ({ initialValue, onChange, placement, ...props }) => {
+  const [color, setColor] = useState(parseColor(initialValue));
 
   useEffect(() => {
-    changeColor(parseColor(initialHexColor));
-  }, [initialHexColor]);
+    changeColor(parseColor(initialValue));
+  }, [initialValue]);
 
   function changeColor(color) {
     if (onChange) {
@@ -46,7 +46,7 @@ const InputColor = ({ initialHexColor, onChange, placement, ...props }) => {
             height: 100%;
             cursor: pointer;
           `}
-          style={{ backgroundColor: color.hex }}
+          style={{ backgroundColor: color.rgba }}
         />
       </span>
     </Popover>
