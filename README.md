@@ -48,7 +48,7 @@ function App() {
           width: 50,
           height: 50,
           marginTop: 20,
-          backgroundColor: color.hex
+          backgroundColor: color.rgba
         }}
       />
     </div>
