@@ -22,10 +22,10 @@ export const Demo = () => {
           width: 50,
           height: 50,
           marginBottom: 20,
-          backgroundColor: color.hex
+          backgroundColor: color.rgba
         }}
       >
-        {color.hex}
+        {color.rgba}
       </div>
       <input
         type="color"
