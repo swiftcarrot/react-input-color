@@ -30,17 +30,17 @@
     "@babel/core": "^7.9.0",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
-    "babel-jest": "^24.8.0",
-    "babel-preset-swiftcarrot": "^1.0.0",
-    "jest": "^24.8.0",
+    "babel-jest": "^25.2.4",
+    "babel-preset-swiftcarrot": "^1.1.0",
+    "jest": "^25.2.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-test-renderer": "^16.8.6",
-    "rollup": "^1.17.0",
-    "rollup-plugin-babel": "^4.3.3"
+    "rollup": "^2.3.2",
+    "rollup-plugin-babel": "^4.4.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.5.5",
+    "@babel/runtime": "^7.9.2",
     "@emotion/core": "^10.0.14",
     "@swiftcarrot/color-fns": "^3.0.4",
     "@xkit/popover": "^0.1.20",
