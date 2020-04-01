@@ -9,12 +9,13 @@ export class Color {
   b: number;
   a: number;
   hex: string;
+  rgba: string;
 }
 
 export interface InputColorProps {
-  initialHexColor: string;
+  initialValue: string;
   placement?: string;
   onChange?(color: Color): void;
 }
 
-export default function InputColor(props: InputColorProps)
+export default function InputColor(props: InputColorProps);

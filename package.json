@@ -10,7 +10,9 @@
     "build": "rm -rf dist && NODE_ENV=production rollup -c",
     "test": "jest --coverage",
     "prepublishOnly": "npm test && npm run build",
-    "watch": "rollup -cw"
+    "watch": "rollup -cw",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "files": [
     "index.d.ts",
@@ -27,19 +29,25 @@
   "author": "Wang Zuo",
   "license": "MIT",
   "devDependencies": {
-    "babel-jest": "^24.8.0",
-    "babel-preset-swiftcarrot": "^1.0.0",
-    "jest": "^24.8.0",
+    "@babel/core": "^7.9.0",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "babel-jest": "^25.2.4",
+    "babel-loader": "^8.1.0",
+    "babel-preset-swiftcarrot": "^1.1.0",
+    "jest": "^25.2.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-test-renderer": "^16.8.6",
-    "rollup": "^1.17.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.0.1",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "rollup": "^2.3.2",
+    "rollup-plugin-babel": "^4.4.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.5.5",
+    "@babel/runtime": "^7.9.2",
     "@emotion/core": "^10.0.14",
     "@swiftcarrot/color-fns": "^3.0.4",
     "@xkit/popover": "^0.1.20",

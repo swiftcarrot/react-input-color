@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## 3.0.0
+
+- true alpha support with `initialValue`
+- remove `initialHexColor` support
+- set alpha 0 - 100
+
 ## 2.0.29
 
 - fix typescript definition

@@ -27,6 +27,8 @@ yarn add react-input-color
 
 ### Usage
 
+The `initialValue` property supports 6 (`#RRGGBB`) and 8 (`#RRGGBBAA`) digits hex value.
+
 ```javascript
 import React from 'react';
 import InputColor from 'react-input-color';
@@ -37,7 +39,7 @@ function App() {
   return (
     <div>
       <InputColor
-        initialHexColor="#5e72e4"
+        initialValue="#5e72e4"
         onChange={setColor}
         placement="right"
       />
