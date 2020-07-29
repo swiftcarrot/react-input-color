@@ -39,7 +39,9 @@ const ColorPicker = ({ color, onChange }) => {
   }
 
   function changeHex(hex) {
-    changeColor({ ...color, hex });
+    const {r, g, b} = hex2rgb(hex);
+    const {h, s, v} = rgb2hsv(r, g, b);
+    changeColor({ ...color, r, g, b, h, s, v, hex });
   }
 
   function handleHexKeyUp(e) {
