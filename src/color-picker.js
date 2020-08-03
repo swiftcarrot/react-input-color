@@ -8,7 +8,7 @@ import {
   rgb2hex,
   hex2rgb,
   rgba,
-  hsv2rgb
+  hsv2rgb,
 } from '@swiftcarrot/color-fns';
 
 const KEY_ENTER = 13;
@@ -39,8 +39,8 @@ const ColorPicker = ({ color, onChange }) => {
   }
 
   function changeHex(hex) {
-    const {r, g, b} = hex2rgb(hex);
-    const {h, s, v} = rgb2hsv(r, g, b);
+    const { r, g, b } = hex2rgb(hex);
+    const { h, s, v } = rgb2hsv(r, g, b);
     changeColor({ ...color, r, g, b, h, s, v, hex });
   }
 
@@ -82,8 +82,8 @@ const ColorPicker = ({ color, onChange }) => {
               height: 12,
               backgroundColor: 'rgba(0,0,0,0)',
               border: '2px solid #fff',
-              borderRadius: '50%'
-            }
+              borderRadius: '50%',
+            },
           }}
         />
       </div>
@@ -93,7 +93,7 @@ const ColorPicker = ({ color, onChange }) => {
           width: '100%',
           marginTop: 10,
           marginBottom: 10,
-          display: 'flex'
+          display: 'flex',
         }}
       >
         <div css={{ flex: 1, marginRight: 10 }}>
@@ -108,17 +108,17 @@ const ColorPicker = ({ color, onChange }) => {
                 height: 12,
                 borderRadius: 0,
                 background:
-                  'linear-gradient(to left, #FF0000 0%, #FF0099 10%, #CD00FF 20%, #3200FF 30%, #0066FF 40%, #00FFFD 50%, #00FF66 60%, #35FF00 70%, #CDFF00 80%, #FF9900 90%, #FF0000 100%)'
+                  'linear-gradient(to left, #FF0000 0%, #FF0099 10%, #CD00FF 20%, #3200FF 30%, #0066FF 40%, #00FFFD 50%, #00FF66 60%, #35FF00 70%, #CDFF00 80%, #FF9900 90%, #FF0000 100%)',
               },
               active: {
-                background: 'none'
+                background: 'none',
               },
               thumb: {
                 width: 5,
                 height: 14,
                 borderRadius: 0,
-                backgroundColor: '#eee'
-              }
+                backgroundColor: '#eee',
+              },
             }}
           />
           <InputSlider
@@ -130,17 +130,17 @@ const ColorPicker = ({ color, onChange }) => {
                 width: '100%',
                 height: 12,
                 borderRadius: 0,
-                background: opacityGradient
+                background: opacityGradient,
               },
               active: {
-                background: 'none'
+                background: 'none',
               },
               thumb: {
                 width: 5,
                 height: 14,
                 borderRadius: 0,
-                backgroundColor: '#eee'
-              }
+                backgroundColor: '#eee',
+              },
             }}
             onChange={({ x }) => changeAlpha(x)}
           />
@@ -156,7 +156,7 @@ const ColorPicker = ({ color, onChange }) => {
             style={{ width: 70, textAlign: 'left' }}
             type="text"
             value={color.hex}
-            onChange={e => changeHex(e.target.value)}
+            onChange={(e) => changeHex(e.target.value)}
             onKeyUp={handleHexKeyUp}
           />
           <div>Hex</div>
@@ -167,7 +167,7 @@ const ColorPicker = ({ color, onChange }) => {
             min={0}
             max={255}
             value={r}
-            onChange={r => changeRGB(r, g, b)}
+            onChange={(r) => changeRGB(r, g, b)}
           />
           <div>R</div>
         </div>
@@ -176,7 +176,7 @@ const ColorPicker = ({ color, onChange }) => {
             min={0}
             max={255}
             value={g}
-            onChange={g => changeRGB(r, g, b)}
+            onChange={(g) => changeRGB(r, g, b)}
           />
           <div>G</div>
         </div>
@@ -185,7 +185,7 @@ const ColorPicker = ({ color, onChange }) => {
             min={0}
             max={255}
             value={b}
-            onChange={b => changeRGB(r, g, b)}
+            onChange={(b) => changeRGB(r, g, b)}
           />
           <div>B</div>
         </div>
@@ -195,7 +195,7 @@ const ColorPicker = ({ color, onChange }) => {
             min={0}
             max={100}
             value={a}
-            onChange={a => changeAlpha(a)}
+            onChange={(a) => changeAlpha(a)}
           />
           <div>A</div>
         </div>
@@ -205,7 +205,7 @@ const ColorPicker = ({ color, onChange }) => {
 };
 
 ColorPicker.defaultProps = {
-  initialValue: '#5e72e4'
+  initialValue: '#5e72e4',
 };
 
 const styles = {
@@ -214,14 +214,14 @@ const styles = {
     width: 230,
 
     '*': {
-      userSelect: 'none'
-    }
+      userSelect: 'none',
+    },
   },
 
   selector: {
     position: 'relative',
     width: 230,
-    height: 230
+    height: 230,
   },
 
   gradientWhite: {
@@ -231,7 +231,7 @@ const styles = {
     right: 0,
     bottom: 0,
     background:
-      'linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%)'
+      'linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%)',
   },
 
   gradientDark: {
@@ -240,13 +240,13 @@ const styles = {
     left: 0,
     right: 0,
     bottom: 0,
-    background: 'linear-gradient(to bottom, transparent 0%, #000000 100%)'
+    background: 'linear-gradient(to bottom, transparent 0%, #000000 100%)',
   },
 
   inputs: {
     display: 'flex',
     justifyContent: 'space-between',
-    width: '100%'
+    width: '100%',
   },
 
   input: {
@@ -257,13 +257,13 @@ const styles = {
 
     input: {
       width: 30,
-      textAlign: 'center'
+      textAlign: 'center',
     },
 
     div: {
-      marginTop: 4
-    }
-  }
+      marginTop: 4,
+    },
+  },
 };
 
 export default ColorPicker;
