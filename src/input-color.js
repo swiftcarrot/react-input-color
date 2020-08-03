@@ -54,7 +54,7 @@ const InputColor = ({ initialValue, onChange, placement, ...props }) => {
 };
 
 InputColor.defaultProps = {
-  placement: 'bottom'
+  placement: 'bottom',
 };
 
 export default InputColor;

@@ -3,7 +3,7 @@ import InputColor from '../src';
 
 export default {
   title: 'InputColor',
-  component: InputColor
+  component: InputColor,
 };
 
 export const Demo = () => {
@@ -22,7 +22,7 @@ export const Demo = () => {
           width: 50,
           height: 50,
           marginBottom: 20,
-          backgroundColor: color.rgba
+          backgroundColor: color.rgba,
         }}
       >
         {color.rgba}
@@ -30,7 +30,7 @@ export const Demo = () => {
       <input
         type="color"
         value={color.hex}
-        onChange={e => setInitial(e.target.value)}
+        onChange={(e) => setInitial(e.target.value)}
       />
       <br />
       <InputColor initialValue={initial} onChange={handleChange} />
@@ -53,7 +53,7 @@ export const Alpha = () => {
           width: 50,
           height: 50,
           marginBottom: 20,
-          backgroundColor: color.rgba
+          backgroundColor: color.rgba,
         }}
       >
         {color.rgba}

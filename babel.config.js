@@ -1,3 +1,3 @@
 module.exports = {
-  presets: ['swiftcarrot']
+  presets: ['swiftcarrot'],
 };

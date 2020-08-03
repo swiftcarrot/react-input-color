@@ -19,7 +19,7 @@ test('parseColor', () => {
     v: 86,
     a: 100,
     hex: '#3498db',
-    rgba: 'rgba(52,152,219,1)'
+    rgba: 'rgba(52,152,219,1)',
   });
   expect(parseColor('#3498db32')).toEqual({
     r: 52,
@@ -30,7 +30,7 @@ test('parseColor', () => {
     v: 86,
     a: 20,
     hex: '#3498db',
-    rgba: 'rgba(52,152,219,0.2)'
+    rgba: 'rgba(52,152,219,0.2)',
   });
 });
 

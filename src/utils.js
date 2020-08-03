@@ -20,5 +20,5 @@ export {
   hsv2hex,
   hex2rgb,
   rgba,
-  hsv2rgb
+  hsv2rgb,
 } from '@swiftcarrot/color-fns';
