@@ -4,7 +4,7 @@
 
 ## 4.0.0
 
-- colors.hex returns 8-digit with alpha value
+- color.hex returns 8-digit with alpha value
 
 ## 3.0.1
 
