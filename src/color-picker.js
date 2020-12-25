@@ -10,7 +10,7 @@ import {
   rgba,
   hsv2rgb,
 } from '@swiftcarrot/color-fns';
-import { rgbaToHex } from './utils';
+import { rgba2hex } from './utils';
 
 const KEY_ENTER = 13;
 
@@ -19,7 +19,11 @@ const ColorPicker = ({ color, onChange }) => {
 
   function changeColor(color) {
     if (onChange) {
-      onChange({ ...color, rgba: rgba(color.r, color.g, color.b, color.a) });
+      onChange({
+        ...color,
+        rgba: rgba(color.r, color.g, color.b, color.a),
+        hex: rgba2hex(color.r, color.g, color.b, color.a),
+      });
     }
   }
 
@@ -36,8 +40,7 @@ const ColorPicker = ({ color, onChange }) => {
   }
 
   function changeAlpha(a) {
-    const hex = rgbaToHex(`rgba(${r}, ${g}, ${b}, ${a / 100})`);
-    changeColor({ ...color, a, hex });
+    changeColor({ ...color, a });
   }
 
   function changeHex(hex) {

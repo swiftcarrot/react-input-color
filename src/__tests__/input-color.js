@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import InputColor from '../';
-import { parseColor, hex2alpha, rgbaToHex } from '../utils';
+import { parseColor, hex2alpha, rgba2hex, alpha2hex } from '../utils';
 
 test('render', () => {
   expect(() =>
@@ -41,6 +41,13 @@ test('hex2alpha', () => {
   expect(hex2alpha('00')).toEqual(0);
 });
 
-test('rgbaToHex', () => {
-  expect(rgbaToHex('rgba(255, 255, 255,0.5))')).toEqual(`#ffffff80`);
+test('alpha2hex', () => {
+  expect(alpha2hex(100)).toEqual('ff');
+  expect(alpha2hex(97)).toEqual('f7');
+  expect(alpha2hex(22)).toEqual('38');
+  expect(alpha2hex(0)).toEqual('00');
+});
+
+test('rgba2hex', () => {
+  expect(rgba2hex(255, 255, 255, 50)).toEqual(`#ffffff80`);
 });
