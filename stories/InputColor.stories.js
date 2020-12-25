@@ -17,16 +17,22 @@ export const Demo = () => {
 
   return (
     <div>
-      <div
+      <pre
         style={{
-          width: 50,
-          height: 50,
+          marginBottom: 20,
+          backgroundColor: color.hex,
+        }}
+      >
+        {JSON.stringify(color, null, 2)}
+      </pre>
+      <pre
+        style={{
           marginBottom: 20,
           backgroundColor: color.rgba,
         }}
       >
-        {color.rgba}
-      </div>
+        {JSON.stringify(color, null, 2)}
+      </pre>
       <input
         type="color"
         value={color.hex}
@@ -48,16 +54,22 @@ export const Alpha = () => {
 
   return (
     <div>
-      <div
+      <pre
         style={{
-          width: 50,
-          height: 50,
+          marginBottom: 20,
+          backgroundColor: color.hex,
+        }}
+      >
+        {JSON.stringify(color, null, 2)}
+      </pre>
+      <pre
+        style={{
           marginBottom: 20,
           backgroundColor: color.rgba,
         }}
       >
-        {color.rgba}
-      </div>
+        {JSON.stringify(color, null, 2)}
+      </pre>
       <InputColor initialValue="#5e72e412" onChange={handleChange} />
     </div>
   );
