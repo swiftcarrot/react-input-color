@@ -1,0 +1,3 @@
+site: react-input-color
+public: storybook-static
+force_ssl: true

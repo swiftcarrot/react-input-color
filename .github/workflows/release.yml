@@ -1,0 +1,16 @@
+name: release
+on:
+  push:
+    branches: [master]
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: yarn install
+      - run: yarn build-storybook
+      - uses: caitouyun/actions@master
+        with:
+          args: caitou deploy --git
+        env:
+          CAITOU_TOKEN: ${{ secrets.CAITOU_TOKEN }}
