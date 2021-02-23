@@ -21,9 +21,9 @@ npm install react-input-color --save
 yarn add react-input-color
 ```
 
-### Demo
+### Storybook Demo
 
-[https://swiftcarrot.dev/react-input-color](https://swiftcarrot.dev/react-input-color)
+[https://react-input-color.caitouyun.com](https://react-input-color.caitouyun.com)
 
 ### Usage
 
@@ -48,7 +48,7 @@ function App() {
           width: 50,
           height: 50,
           marginTop: 20,
-          backgroundColor: color.rgba
+          backgroundColor: color.rgba,
         }}
       />
     </div>
