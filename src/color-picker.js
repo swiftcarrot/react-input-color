@@ -14,7 +14,7 @@ import { rgba2hex } from './utils';
 
 const KEY_ENTER = 13;
 
-const ColorPicker = ({ color, onChange }) => {
+const ColorPicker = ({ color, onChange, disabled }) => {
   const { r, g, b, a, h, s, v } = color;
 
   function changeColor(color) {
@@ -80,6 +80,7 @@ const ColorPicker = ({ color, onChange }) => {
           y={100 - v}
           ymax={100}
           onChange={({ x, y }) => changeHSV(h, x, 100 - y)}
+          disabled={disabled}
           styles={{
             track: { width: '100%', height: '100%', background: 'none' },
             thumb: {
@@ -107,6 +108,7 @@ const ColorPicker = ({ color, onChange }) => {
             x={h}
             xmax={359}
             onChange={({ x }) => changeHSV(x, s, v)}
+            disabled={disabled}
             styles={{
               track: {
                 width: '100%',
@@ -148,6 +150,7 @@ const ColorPicker = ({ color, onChange }) => {
               },
             }}
             onChange={({ x }) => changeAlpha(x)}
+            disabled={disabled}
           />
         </div>
         <div
@@ -163,6 +166,7 @@ const ColorPicker = ({ color, onChange }) => {
             value={color.hex}
             onChange={(e) => changeHex(e.target.value)}
             onKeyUp={handleHexKeyUp}
+            disabled={disabled}
           />
           <div>Hex</div>
         </div>
@@ -173,6 +177,7 @@ const ColorPicker = ({ color, onChange }) => {
             max={255}
             value={r}
             onChange={(r) => changeRGB(r, g, b)}
+            disabled={disabled}
           />
           <div>R</div>
         </div>
@@ -182,6 +187,7 @@ const ColorPicker = ({ color, onChange }) => {
             max={255}
             value={g}
             onChange={(g) => changeRGB(r, g, b)}
+            disabled={disabled}
           />
           <div>G</div>
         </div>
@@ -191,6 +197,7 @@ const ColorPicker = ({ color, onChange }) => {
             max={255}
             value={b}
             onChange={(b) => changeRGB(r, g, b)}
+            disabled={disabled}
           />
           <div>B</div>
         </div>
@@ -201,6 +208,7 @@ const ColorPicker = ({ color, onChange }) => {
             max={100}
             value={a}
             onChange={(a) => changeAlpha(a)}
+            disabled={disabled}
           />
           <div>A</div>
         </div>
@@ -211,6 +219,7 @@ const ColorPicker = ({ color, onChange }) => {
 
 ColorPicker.defaultProps = {
   initialValue: '#5e72e4',
+  disabled: false
 };
 
 const styles = {

@@ -5,7 +5,7 @@ import Popover from '@xkit/popover';
 import ColorPicker from './color-picker';
 import { parseColor } from './utils';
 
-const InputColor = ({ initialValue, onChange, placement, ...props }) => {
+const InputColor = ({ initialValue, onChange, placement, disabled, ...props }) => {
   const [color, setColor] = useState(parseColor(initialValue));
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const InputColor = ({ initialValue, onChange, placement, ...props }) => {
   return (
     <Popover
       placement={placement}
-      body={<ColorPicker color={color} onChange={changeColor} />}
+      body={<ColorPicker color={color} onChange={changeColor} disabled={ disabled } />}
     >
       <span
         {...props}
@@ -55,6 +55,7 @@ const InputColor = ({ initialValue, onChange, placement, ...props }) => {
 
 InputColor.defaultProps = {
   placement: 'bottom',
+  disabled: false
 };
 
 export default InputColor;
