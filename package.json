@@ -1,6 +1,6 @@
 {
   "name": "react-input-color",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "React input color component with hsv color picker",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
