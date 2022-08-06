@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## 4.0.1
+
+- upgrade react peer deps
+
 ## 4.0.0
 
 - color.hex returns 8-digit with alpha value
