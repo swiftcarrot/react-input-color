@@ -10,11 +10,12 @@ import {
   rgba,
   hsv2rgb,
 } from '@swiftcarrot/color-fns';
-import { rgba2hex } from './utils';
+import { rgba2hex, parseColor, onlyUnique } from './utils';
+import ColorSquare from './color-square'
 
 const KEY_ENTER = 13;
 
-const ColorPicker = ({ color, onChange, disabled }) => {
+const ColorPicker = ({ color, onChange, disabled, recommendedColors }) => {
   const { r, g, b, a, h, s, v } = color;
 
   function changeColor(color) {
@@ -70,6 +71,20 @@ const ColorPicker = ({ color, onChange, disabled }) => {
 
   return (
     <div css={styles.picker} onClick={handleClick}>
+
+      {!!recommendedColors.length && (
+        <div css={styles.recommendedColors}>
+          {onlyUnique(recommendedColors).map((recommendedColor) => (
+            <ColorSquare
+              key={recommendedColor}
+              color={recommendedColor}
+              onClick={() => !disabled && onChange(parseColor(recommendedColor))}
+              disabled={disabled}
+            />
+          ))}
+        </div>
+      )}
+
       <div css={styles.selector} style={{ backgroundColor: hueBackground }}>
         <div css={styles.gradientWhite} />
         <div css={styles.gradientDark} />
@@ -153,9 +168,7 @@ const ColorPicker = ({ color, onChange, disabled }) => {
             disabled={disabled}
           />
         </div>
-        <div
-          style={{ backgroundColor: rgbaBackground, width: 30, height: 30 }}
-        />
+        <ColorSquare color={rgbaBackground} />
       </div>
 
       <div css={styles.inputs}>
@@ -219,7 +232,8 @@ const ColorPicker = ({ color, onChange, disabled }) => {
 
 ColorPicker.defaultProps = {
   initialValue: '#5e72e4',
-  disabled: false
+  disabled: false,
+  recommendedColors: []
 };
 
 const styles = {
@@ -278,6 +292,16 @@ const styles = {
       marginTop: 4,
     },
   },
+
+  recommendedColors: {
+    width: '100%',
+    display: 'flex',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    paddingBottom: 10,
+    marginBottom: 10,
+    borderBottom: '1px solid #e9e9e9'
+  }
 };
 
 export default ColorPicker;

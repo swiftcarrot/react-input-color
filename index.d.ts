@@ -17,6 +17,7 @@ export interface InputColorProps {
   placement?: string;
   onChange?(color: Color): void;
   disabled?: boolean;
+  recommendedColors?: string[];
 }
 
 export default function InputColor(props: InputColorProps);
