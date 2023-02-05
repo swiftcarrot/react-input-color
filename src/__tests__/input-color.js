@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import InputColor from '../';
-import { parseColor, hex2alpha, rgba2hex, alpha2hex } from '../utils';
+import { parseColor, hex2alpha, rgba2hex, alpha2hex, onlyUnique } from '../utils';
 
 test('render', () => {
   expect(() =>
@@ -50,4 +50,8 @@ test('alpha2hex', () => {
 
 test('rgba2hex', () => {
   expect(rgba2hex(255, 255, 255, 50)).toEqual(`#ffffff80`);
+});
+
+test('onlyUnique', () => {
+  expect(onlyUnique(['a', 'b', 'c', 'b'])).toEqual(['a', 'b', 'c']);
 });

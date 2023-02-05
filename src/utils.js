@@ -31,3 +31,7 @@ export {
   rgba,
   hsv2rgb,
 } from '@swiftcarrot/color-fns';
+
+export function onlyUnique(arr) {
+  return arr.filter((value, index, self) => self.indexOf(value) === index);
+}

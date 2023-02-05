@@ -39,7 +39,11 @@ export const Demo = () => {
         onChange={(e) => setInitial(e.target.value)}
       />
       <br />
-      <InputColor initialValue={initial} onChange={handleChange} />
+      <InputColor
+        initialValue={initial}
+        onChange={handleChange}
+        recommendedColors={['#000', '#babaca', '#3a1596', '#5e72e4', '#Fa2c4a', '#b24acf']}
+      />
     </div>
   );
 };
