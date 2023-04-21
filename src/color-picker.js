@@ -58,9 +58,8 @@ const ColorPicker = ({ color, onChange, disabled }) => {
 
   function handleHexKeyUp(e) {
     if (e.keyCode === KEY_ENTER) {
-      const hex = e.target.value.trim();
-      const { r, g, b } = hex2rgb(hex);
-      changeColor({ ...color, r, g, b, a, hex });
+      const hex = hexInput.trim();
+      changeHex(hex)
     }
   }
 
