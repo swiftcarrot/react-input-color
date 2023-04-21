@@ -11,11 +11,12 @@ import {
   hsv2rgb,
 } from '@swiftcarrot/color-fns';
 import { rgba2hex } from './utils';
+import { useEffect, useState } from 'react';
 
 const KEY_ENTER = 13;
 
 const ColorPicker = ({ color, onChange, disabled }) => {
-  const { r, g, b, a, h, s, v } = color;
+  const { r, g, b, a, h, s, v, hex } = color;
 
   function changeColor(color) {
     if (onChange) {
@@ -44,9 +45,15 @@ const ColorPicker = ({ color, onChange, disabled }) => {
   }
 
   function changeHex(hex) {
+
+    const hexRegx = /^#(?:[0-9A-F]{3}|[0-9A-F]{6}|[0-9A-F]{8})$/i
     const { r, g, b } = hex2rgb(hex);
     const { h, s, v } = rgb2hsv(r, g, b);
-    changeColor({ ...color, r, g, b, h, s, v, hex });
+
+    if(hexRegx.test(hex)) {
+      changeColor({ ...color, r, g, b, h, s, v, hex });
+    }
+
   }
 
   function handleHexKeyUp(e) {
@@ -67,6 +74,14 @@ const ColorPicker = ({ color, onChange, disabled }) => {
   const rgba100 = rgba(r, g, b, 100);
   const opacityGradient = `linear-gradient(to right, ${rgba0}, ${rgba100})`;
   const hueBackground = hsv2hex(h, 100, 100);
+
+  const [hexInput, setHexInput] = useState(hex)
+
+  //reset hexInput if hex value is changed through another UI interaction
+  useEffect(() => {
+    setHexInput(hex)
+  },[hex])
+
 
   return (
     <div css={styles.picker} onClick={handleClick}>
@@ -163,8 +178,11 @@ const ColorPicker = ({ color, onChange, disabled }) => {
           <input
             style={{ width: 70, textAlign: 'left' }}
             type="text"
-            value={color.hex}
-            onChange={(e) => changeHex(e.target.value)}
+            value={hexInput}
+            onChange={(e) => setHexInput(e.target.value)}
+            onBlur={() => {
+              changeHex(hexInput)
+            }}
             onKeyUp={handleHexKeyUp}
             disabled={disabled}
           />
